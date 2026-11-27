@@ -28,7 +28,7 @@ See `proof/`, `proof-weighted/`, and `proof-matrix/`.
 | `j=6..60`, `7j <= n <= 12j-1` | 9,075 | 9,075 | 9,075 | 0 |
 
 Independent compact reruns reproduced all 660 `j=5` rows/pairs and all 9,075 wide-range rows/pairs.
-Additional compact `j=3,4` runs are recorded in `numerical/` when complete.
+Partial `j=3,4` scans were not audited and are not claimed.
 
 ## Lean
 

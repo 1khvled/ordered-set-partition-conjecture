@@ -47,6 +47,6 @@ Partial `j=3,4` scans reached `n=525` and `n=600`, but were not audited and are 
 
 ## Disk-safe reproducibility
 
-The original full root-enclosure/discriminant logs were removed after the audit when OpenCode snapshot copies filled the system disk. The scripts and audited summary JSON files were retained. `compact_frontier.py` reruns the completed ranges while storing only SHA-256 hashes, discriminant signs/hashes, exact Sturm counts, and pass/fail interval checks. Its outputs are `compact-j5.jsonl`, `compact-wide.jsonl`, and the corresponding summary JSON files. The `--fast` mode skips full discriminant recomputation and thins the exact-Sturm schedule; it is used for the independent `j=3,4` extension.
+The original full root-enclosure/discriminant logs were removed after the audit when OpenCode snapshot copies filled the system disk. The scripts and audited summary JSON files were retained. `compact_frontier.py` reruns the completed ranges while storing only SHA-256 hashes, discriminant signs/hashes, exact Sturm counts, and pass/fail interval checks. Its outputs are `compact-j5.jsonl`, `compact-wide.jsonl`, and the corresponding summary JSON files. The `--fast` mode skips full discriminant recomputation and thins the exact-Sturm schedule. A partial `j=3,4` fast run was stopped before completion and is not claimed.
 
 Finite checks are not a proof of the conjecture.

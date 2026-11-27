@@ -83,6 +83,22 @@ O_6 = 3690 + 973t + 20t^2
 - `proof-final-*` — final targeted attacks: corrected WRS/Wronskian, consecutive
   sign conditions, inner PDE, threshold renewal, middle zeros, crossing
   involutions, and common-interlacer propagation.
+- `proof-global-wronskian/`, `proof-all-lag-pick/`, `proof-cross-boundary/`,
+  `proof-residue-domination/`, `proof-joint-interlacing/` — exact reductions
+  showing that the Pick, boundary, and joint-interlacing routes are equivalent
+  to or harder than the original problem; no solution is claimed.
+- `proof-chapter-renewal/`, `proof-branching-coupling/` — positive Möbius flow
+  and branching-coupling constructions, with the exact non-positive
+  coefficient-extraction obstruction.
+- `proof-j2-base/`, `proof-j2-resultants/`, `proof-associated-stirling/` — the
+  \(j=2\) deformation, resultant equivalence, and the associated-Stirling
+  reduction of the remaining ratio inequality.
+- `proof-automated-consecutive/`, `proof-hurwitz-wronskian/` — exact finite
+  discovery of the consecutive-Wronskian invariant and its Routh/Hermite
+  obstructions; numerical left-half-plane evidence is not used as a certificate.
+- `proof-counterexample-new/`, `proof-large-j-sweep/` — new-range counterexample
+  hunts with compact exact logs. Large-threshold results are reported from the
+  checkpoint only until the full sweep finishes.
 - `proof-shift/` — exact compatibility probes and the audit trail for a retracted lemma.
 - `literature.md` — sourced context and distinction from related ordered lifts.
 - `lean/` — a compiling dependency-free Lean recurrence plus Mathlib-based

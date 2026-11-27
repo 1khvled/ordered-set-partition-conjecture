@@ -201,6 +201,17 @@ of (WRS) is \(5\) and the right side is \(48\). The resulting test polynomial
 therefore prove the quantitative inequality (WRS), not only a compatible
 window.
 
+The Bézout-matrix formulation gives the same gap. For the root-positive
+Bézoutian \(M(q,p)\), bilinearity gives the all-index identity
+\[
+M(q,\OO_n)=M(q,A_n)+c\,v(q)v(q)^T+c\,M(q,t(t-1)q'),
+\]
+where \(v(q)\) is the coefficient vector of \(q\). At every root \(\mu\) of
+\(q\), the intrinsic kernel has diagonal value
+\(-\mu(\mu-1)q'(\mu)^2<0\). Thus positive definiteness of \(M(q,A_n)\)
+alone cannot suffice; the actual rows must quantitatively dominate this
+negative kernel.
+
 \section{A matrix-route obstruction}
 
 Write \(a_{n,m}=[t^m]\OO_{n,j}\), \(D_j=(1-A_j)^{-1}\), and

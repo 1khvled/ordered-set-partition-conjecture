@@ -120,6 +120,12 @@ Thus (WRS) is exactly the assertion `sgn Oₙ,ⱼ(μ) = −sgn q'(μ)`. These si
 
 Mere compatibility is insufficient. For `j = 2, n = 5`, take `p = (t+2)(t+4)` and `q = t+3`. Then `q` interlaces `p`, and also interlaces `R₅(p) = 9t²+42t+40`. Nevertheless, at `μ = −3`, the left side of (WRS) is `5` and the right side is `48`. The resulting test polynomial `17t²+50t+40` has discriminant `−220`. A successful induction must therefore prove the quantitative inequality (WRS), not only a compatible window.
 
+The Bézout-matrix formulation gives the same gap. For the root-positive Bézoutian `M(q,p)`, bilinearity gives the all-index identity
+
+> M(q,Oₙ) = M(q,Aₙ) + c v(q)v(q)ᵀ + c M(q,t(t−1)q'),
+
+where `v(q)` is the coefficient vector of `q`. At every root `μ` of `q`, the intrinsic kernel has diagonal value `−μ(μ−1)q'(μ)² < 0`. Thus positive definiteness of `M(q,Aₙ)` alone cannot suffice; the actual rows must quantitatively dominate this negative kernel.
+
 ## 6. A matrix-route obstruction
 
 Write `aₙ,ₘ = [tᵐ]Oₙ,ⱼ`, `Dⱼ = (1−Aⱼ)⁻¹`, and `hⱼ = (Cⱼ/zʲ)Dⱼ`. Then

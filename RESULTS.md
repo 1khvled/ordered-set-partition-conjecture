@@ -14,6 +14,8 @@ obtained. Finite computations are not presented as a proof.
 - Exact obstruction to the naive compatible-window implication.
 - Riordan/shear factorization and an exact counterexample to general shear
   preservation of total positivity.
+- Bézoutian decomposition and an exact obstruction to positivity from a
+  compatible window alone.
 
 See `proof/`, `proof-weighted/`, and `proof-matrix/`.
 

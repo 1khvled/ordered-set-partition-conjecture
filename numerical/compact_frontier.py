@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Compact reproducible frontier audit; never stores full root enclosures."""
 from __future__ import annotations
-import argparse, hashlib, json, time
+import argparse, hashlib, json, sys, time
 from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from flint import ctx, fmpz_poly
 from scan import newton_failure, nonreal_roots, ordered_rows, sturm_variations
 from interlace import check_pair

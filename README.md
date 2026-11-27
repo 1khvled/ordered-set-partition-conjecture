@@ -76,6 +76,7 @@ O_6 = 3690 + 973t + 20t^2
 - `proof/` — proof-track identities, candidate recurrences and proof gaps.
 - `proof-weighted/` — rigorous weighted root-separation theorem and exact obstruction.
 - `proof-matrix/` — Riordan/shear factorization and an exact negative-minor obstruction.
+- `proof-bezout/` — Bézoutian decomposition and exact indefinite-kernel obstruction.
 - `proof-shift/` — exact compatibility probes and the audit trail for a retracted lemma.
 - `literature.md` — sourced context and distinction from related ordered lifts.
 - `lean/` — a compiling dependency-free Lean recurrence plus Mathlib-based
@@ -91,6 +92,7 @@ py -3.14 -m pip install python-flint gmpy2 sympy
 py -3.14 scan.py --jmin 3 --jmax 20 --nmax 150 --out scan-results.jsonl
 py -3.14 interlace.py --jmin 3 --jmax 20 --nmax 150 --wronskian
 py -3.14 frontier.py --small-nmin 141 --small-nmax 600 --jmin 6 --jmax 60
+py -3.14 numerical/compact_frontier.py --mode wide --prec 192 --out numerical/compact-wide.jsonl --summary numerical/compact-wide-summary.json
 ```
 
 All final root decisions use rigorous Arb enclosures or exact Sturm arithmetic;

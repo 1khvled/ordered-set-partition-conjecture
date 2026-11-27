@@ -90,9 +90,11 @@ O_6 = 3690 + 973t + 20t^2
 - `proof-chapter-renewal/`, `proof-branching-coupling/` — positive Möbius flow
   and branching-coupling constructions, with the exact non-positive
   coefficient-extraction obstruction.
-- `proof-j2-base/`, `proof-j2-resultants/`, `proof-associated-stirling/` — the
-  \(j=2\) deformation, resultant equivalence, and the associated-Stirling
-  reduction of the remaining ratio inequality.
+- `proof-j2-base/`, `proof-j2-resultants/`, `proof-associated-stirling/`,
+  `proof-associated-stirling-lit/`, `proof-associated-stirling-slc/` — the
+  \(j=2\) deformation, resultant equivalence, literature check, and the
+  associated-Stirling reduction of the remaining ratio inequality to a single
+  cross term.
 - `proof-automated-consecutive/`, `proof-hurwitz-wronskian/` — exact finite
   discovery of the consecutive-Wronskian invariant and its Routh/Hermite
   obstructions; numerical left-half-plane evidence is not used as a certificate.

@@ -162,7 +162,7 @@ All coefficient arithmetic is integral. Real-rootedness and interlacing are cert
 | `j = 5`, `141 ≤ n ≤ 800` | 660 | 660 | 43 |
 | `j = 6..60`, `7j ≤ n ≤ 12j−1` | 9,075 | 9,075 | 9,075 |
 
-No failure was found. The `j = 5` audit checked 61,182 Newton inequalities and 122,892 certified interval comparisons. The wide audit checked 72,600 Newton inequalities and 154,000 interval comparisons. Every wide-range row received an exact Sturm count. A total of 5,012 Sturm controls were cross-checked against SymPy and an independent rational implementation.
+No failure was found. Independent compact reruns reproduced all 660 `j = 5` rows and pairs and all 9,075 wide-range rows and pairs. The `j = 5` audit checked 61,182 Newton inequalities and 122,892 certified interval comparisons. The wide audit checked 72,600 Newton inequalities and 154,000 interval comparisons. Every wide-range row received an exact Sturm count. A total of 5,012 Sturm controls were cross-checked against SymPy and an independent rational implementation.
 
 Partial `j = 3,4` scans reached `n = 525` and `n = 600`, respectively, but were not audited and are not claimed. Full per-row logs are regenerable from the supplied scripts; compact hash/count certificates are retained.
 

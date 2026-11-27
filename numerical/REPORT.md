@@ -29,6 +29,8 @@ The block EGF vanishes at zero and `F_j(0,t)=1`. Independent checks confirmed:
 | `j=5`, `141 <= n <= 800` | 660 | 660 | 43 | 0 |
 | `j=6..60`, `7j <= n <= 12j-1` | 9,075 | 9,075 | 9,075 | 0 |
 
+An independent compact fast rerun reproduced all 660 `j=5` rows and pairs with 24 exact Sturm checks and zero failures.
+
 The `j=5` audit includes 61,182 Newton inequalities and 122,892 certified interval comparisons. The wide audit includes 72,600 Newton inequalities and 154,000 interval comparisons. Every wide row received an exact Sturm count.
 
 Partial `j=3,4` scans reached `n=525` and `n=600`, but were not audited and are not claimed.

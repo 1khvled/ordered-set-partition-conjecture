@@ -16,6 +16,14 @@ obtained. Finite computations are not presented as a proof.
   preservation of total positivity.
 - Bézoutian decomposition and an exact obstruction to positivity from a
   compatible window alone.
+- Exact consecutive sign condition: `O_n interlaces O_{n+1}` iff
+  `O_{n+1}(mu)/O_n'(mu) < 0` at every simple root `mu` of `O_n`.
+- Exact lag-`j` Wronskian target and full-history decomposition of the older tail.
+- Inner/outer decomposition, positive coefficient-minor recurrence, threshold
+  renewal identities, and bulk saddle-point characterization.
+- Exact obstructions for linear/Möbius threshold maps, generic nonlinear renewal,
+  crossing involutions, edge-only asymptotics, and naive common-interlacer
+  propagation.
 
 See `proof/`, `proof-weighted/`, and `proof-matrix/`.
 
@@ -29,6 +37,28 @@ See `proof/`, `proof-weighted/`, and `proof-matrix/`.
 
 Independent compact reruns reproduced all 660 `j=5` rows/pairs and all 9,075 wide-range rows/pairs.
 Partial `j=3,4` scans were not audited and are not claimed.
+
+## Precise remaining target
+
+For consecutive rows, prove the root-sign inequality
+
+\[
+\frac{O_{n+1,j}(\mu)}{O_{n,j}'(\mu)}<0
+\]
+
+at every root \(\mu\) of \(O_{n,j}\). Equivalently, prove the consecutive
+residue/domination inequality in `proof-final-consecutive/NOTES.md`.
+
+For the lag-\(j\) route, prove
+
+\[
+-\frac{nO_{n-1,j}(\mu)+2\mu O_{n-1,j}'(\mu)+S_n(\mu)}
+        {O_{n-j,j}'(\mu)}
+>\binom{n-1}{j-1}\mu(\mu-1),
+\]
+
+equivalently \(W(O_{n,j},O_{n-j,j})(t)>0\) on the negative axis. The full-history
+identity isolates the missing term as \(W(H_{n,j},O_{n-j,j})\).
 
 ## Lean
 

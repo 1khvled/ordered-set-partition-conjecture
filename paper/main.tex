@@ -165,6 +165,62 @@ Substitution into the first-block recurrence proves the formula.
 The same coefficient family, in the snail-race interpretation, appears in
 Chen--Zhu, \emph{A Snail Race Problem} (2026), Theorem 3 and Theorem 7.
 
+\section{An inner/outer decomposition}
+
+Let
+\[
+D_j(z)=\frac1{1-A_j(z)},\qquad g_j(z)=\frac{C_j(z)}{1-A_j(z)},\qquad
+\mathcal H_j(z,t)=\frac1{1-tg_j(z)}.
+\]
+Then
+\[
+F_j(z,t)=D_j(z)\mathcal H_j(z,t).
+\]
+Writing \(d_k=[z^k]D_j\) and
+\(H_{r,j}(t)=r![z^r]\mathcal H_j(z,t)\), we obtain the exact convolution
+\[
+\OO_{n,j}(t)=n!\sum_{r=0}^n d_{n-r}\frac{H_{r,j}(t)}{r!}.
+\]
+Equivalently, with \(N_j=1-A_j\) and \(p_j=z^{j-1}/(j-1)!\),
+\[
+\OO_{n,j}=H_{n,j}+\sum_{r=1}^{j-1}\binom nr\OO_{n-r,j}. \tag{T1}
+\]
+
+The inner family satisfies \(H_{0,j}=1\), \(H_{n,j}=0\) for
+\(1\le n<j\), and \(H_{n,j}(0)=0\) for \(n\ge1\). It also satisfies the
+linear PDE
+\[
+N_j\,\partial_z\mathcal H_j
+=t\bigl[2+(t-1)p_j\bigr]\partial_t\mathcal H_j+t p_j\mathcal H_j.
+\]
+Thus the original problem splits into inner real-rootedness of
+\((H_{n,j})\) and preservation of real-rootedness/interlacing by the specific
+outer transform (T1). The kernels \(g_j\) and \(D_j\) fail the standard
+Pólya-frequency hypotheses, so neither reduction is automatic.
+
+\section{A positive coefficient-minor recurrence}
+
+Write \(a_{m,k}=[t^k]\OO_{m,j}\) and
+\[
+\Delta^{(d)}_{m,k}=a_{m,k+1}a_{m-d,k}-a_{m,k}a_{m-d,k+1}.
+\]
+The coefficient form of the universal recurrence gives the exact identity
+\[
+\begin{aligned}
+\Delta^{(j)}_{n,k}={}&(n+2k)\Delta^{(j-1)}_{n-1,k}
++2a_{n-1,k+1}a_{n-j,k}\\
+&+\sum_{r=2}^{j-1}\binom nr\Delta^{(j-r)}_{n-r,k}\\
+&+\binom{n-1}{j-1}\Bigl((k+1)q_k^2+q_kq_{k+1}
+-kq_{k-1}q_{k+1}\Bigr),
+\end{aligned}
+\]
+where \(q_k=a_{n-j,k}\), and the first-block recurrence supplies
+\(a_{n-1,k+1}\ge\binom{n-1}{j-1}q_{k+1}\). If \(q\) is real-rooted, its
+coefficients are log-concave, and the final line is strictly positive.
+Thus positive lower-lag minors imply positivity of the lag-\(j\) minor.
+This is a genuine positive recurrence, but it controls coefficient ratios,
+not the root residues required by (WRS).
+
 \section{A weighted root-separation reduction}
 
 Fix \(n\ge j\), and suppose the window
@@ -212,6 +268,16 @@ where \(v(q)\) is the coefficient vector of \(q\). At every root \(\mu\) of
 alone cannot suffice; the actual rows must quantitatively dominate this
 negative kernel.
 
+Equivalently, at a root \(\mu\) of \(q\), the first-block recurrence writes
+\[
+\frac{\OO_n(\mu)}{q'(\mu)}
+=\sum_{r=1}^{j-1}\binom nr\frac{\OO_{n-r}(\mu)}{q'(\mu)}
++\mu\sum_{r=j+1}^{n}\binom nr\frac{\OO_{n-r}(\mu)}{q'(\mu)}.
+\]
+Recent-window compatibility controls the first sum, but older rows can change
+sign at old roots. The missing all-index input is a quantitative domination
+bound for this entire older tail.
+
 \section{A matrix-route obstruction}
 
 Write \(a_{n,m}=[t^m]\OO_{n,j}\), \(D_j=(1-A_j)^{-1}\), and
@@ -229,7 +295,9 @@ with a totally nonnegative production matrix for which
 \]
 The target therefore requires a special sheared-minor theorem or a planar
 network for its weighted block-size paths; ordinary total positivity of
-\(R^{(j)}\) is not enough.
+\(R^{(j)}\) is not enough. The natural weighted path digraph is also
+nonplanar; planarizing it yields a reflected, sign-twisted determinant
+inequality rather than the desired minors.
 
 \section{Related ordered lifts are different}
 
@@ -261,10 +329,19 @@ are allowed.  Floating-point root finders are never used as certificates.
 \input{results}
 
 \section{Conclusion and remaining work}
-The all-parameter conjecture is not inferred from finite computation.  The
-proved identities above provide several possible starting points for an
-interlacing induction, while the certified computations identify the precise
-unchecked frontier.
+The all-parameter conjecture is not inferred from finite computation. The
+remaining consecutive-interlacing target is the root-sign inequality
+\[
+\frac{\OO_{n+1,j}(\mu)}{\OO_{n,j}'(\mu)}<0
+\]
+at every root \(\mu\) of \(\OO_{n,j}\). The lag-\(j\) WRS route is equivalently
+the negative-axis Wronskian inequality
+\(W(\OO_{n,j},\OO_{n-j,j})(t)>0\), with the full older tail isolated as
+\(W(H_{n,j},\OO_{n-j,j})\). Standard PF, CZDS, Favard, Riordan-shear,
+planar-network, crossing-involution, threshold-renewal, and Bézout-positivity
+routes all have exact obstructions. Fixed-\(K\) edge asymptotics also do not
+control the \(\Theta(m)\) middle zeros. The certified computations identify
+the precise unchecked frontier.
 
 \begin{thebibliography}{9}
 \bibitem{Ale26}

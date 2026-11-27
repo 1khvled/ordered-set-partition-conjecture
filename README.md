@@ -21,7 +21,10 @@ The conjecture asserts that every \(O_{n,j}\) is real-rooted and that
 
 > **Status:** research in progress. The universal differential recurrence is
 > proved, and the all-parameter real-rootedness/interlacing statement remains
-> open. Finite exact checks are evidence, not a proof of the full conjecture.
+> open. The exact remaining consecutive-interlacing target is
+> \(O_{n+1,j}(\mu)/O_{n,j}'(\mu)<0\) at every root \(\mu\) of \(O_{n,j}\);
+> the lag-\(j\) WRS route is equivalently a negative-axis Wronskian inequality.
+> Finite exact checks are evidence, not a proof of the full conjecture.
 > See [RESULTS.md](RESULTS.md) for the concise proved/computed status.
 
 ## Main proved recurrence and proof obstruction
@@ -77,6 +80,9 @@ O_6 = 3690 + 973t + 20t^2
 - `proof-weighted/` — rigorous weighted root-separation theorem and exact obstruction.
 - `proof-matrix/` — Riordan/shear factorization and an exact negative-minor obstruction.
 - `proof-bezout/` — Bézoutian decomposition and exact indefinite-kernel obstruction.
+- `proof-final-*` — final targeted attacks: corrected WRS/Wronskian, consecutive
+  sign conditions, inner PDE, threshold renewal, middle zeros, crossing
+  involutions, and common-interlacer propagation.
 - `proof-shift/` — exact compatibility probes and the audit trail for a retracted lemma.
 - `literature.md` — sourced context and distinction from related ordered lifts.
 - `lean/` — a compiling dependency-free Lean recurrence plus Mathlib-based

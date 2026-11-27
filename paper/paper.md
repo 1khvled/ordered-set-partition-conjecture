@@ -104,7 +104,37 @@ Substitution into the first-block recurrence proves the identity. ∎
 
 The same coefficients appear in Chen–Zhu, *A Snail Race Problem* (2026), Theorems 3 and 7.
 
-## 5. A weighted root-separation reduction
+## 5. An inner/outer decomposition
+
+Let `Dⱼ = 1/(1−Aⱼ)`, `gⱼ = Cⱼ/(1−Aⱼ)`, and `ℋⱼ = 1/(1−t gⱼ)`. Then
+
+> Fⱼ = Dⱼ ℋⱼ.
+
+Writing `dₖ = [zᵏ]Dⱼ` and `Hᵣ,ⱼ = r![zʳ]ℋⱼ`, we obtain the exact convolution
+
+> Oₙ,ⱼ = n! Σᵣ₌₀ⁿ dₙ₋ᵣ Hᵣ,ⱼ/r!.
+
+Equivalently, with `Nⱼ = 1−Aⱼ` and `pⱼ = z^{j−1}/(j−1)!`,
+
+> Oₙ,ⱼ = Hₙ,ⱼ + Σᵣ₌₁^{j−1} C(n,r) Oₙ₋ᵣ,ⱼ. (T1)
+
+The inner family satisfies `H₀,ⱼ = 1`, `Hₙ,ⱼ = 0` for `1 ≤ n < j`, and `Hₙ,ⱼ(0) = 0` for `n ≥ 1`. It also satisfies the linear PDE
+
+> Nⱼ ∂zℋⱼ = t[2 + (t−1)pⱼ] ∂tℋⱼ + t pⱼ ℋⱼ.
+
+Thus the original problem splits into inner real-rootedness of `(Hₙ,ⱼ)` and preservation of real-rootedness/interlacing by the specific outer transform (T1). The kernels `gⱼ` and `Dⱼ` fail the standard Pólya-frequency hypotheses, so neither reduction is automatic.
+
+## 6. A positive coefficient-minor recurrence
+
+Write `aₘ,ₖ = [tᵏ]Oₘ,ⱼ` and `Δ⁽ᵈ⁾ₘ,ₖ = aₘ,ₖ₊₁aₘ₋d,ₖ − aₘ,ₖaₘ₋d,ₖ₊₁`. The coefficient form of the universal recurrence gives the exact identity
+
+> Δ⁽ʲ⁾ₙ,ₖ = (n+2k)Δ⁽ʲ⁻¹⁾ₙ₋₁,ₖ + 2aₙ₋₁,ₖ₊₁aₙ₋ⱼ,ₖ  
+> + Σᵣ₌₂^{j−1} C(n,r)Δ⁽ʲ⁻ʳ⁾ₙ₋ᵣ,ₖ  
+> + C(n−1,j−1)[(k+1)qₖ² + qₖqₖ₊₁ − kqₖ₋₁qₖ₊₁],
+
+where `qₖ = aₙ₋ⱼ,ₖ`, and the first-block recurrence supplies `aₙ₋₁,ₖ₊₁ ≥ C(n−1,j−1)qₖ₊₁`. If `q` is real-rooted, its coefficients are log-concave, and the final line is strictly positive. Thus positive lower-lag minors imply positivity of the lag-`j` minor. This is a genuine positive recurrence, but it controls coefficient ratios, not the root residues required by WRS.
+
+## 7. A weighted root-separation reduction
 
 Fix `n ≥ j`, and suppose the window `Oₙ₋ⱼ,ⱼ, ..., Oₙ₋₁,ⱼ` is commonly compatible. Put `q = Oₙ₋ⱼ,ⱼ`, `p = Oₙ₋₁,ⱼ`, `Sₙ = Σᵣ₌₂^{j−1} C(n,r)Oₙ₋ᵣ,ⱼ`, and `c = C(n−1,j−1)`. For every root `μ` of `q`, impose
 
@@ -126,7 +156,13 @@ The Bézout-matrix formulation gives the same gap. For the root-positive Bézout
 
 where `v(q)` is the coefficient vector of `q`. At every root `μ` of `q`, the intrinsic kernel has diagonal value `−μ(μ−1)q'(μ)² < 0`. Thus positive definiteness of `M(q,Aₙ)` alone cannot suffice; the actual rows must quantitatively dominate this negative kernel.
 
-## 6. A matrix-route obstruction
+Equivalently, at a root `μ` of `q`, the first-block recurrence writes
+
+> Oₙ,ⱼ(μ)/q'(μ) = Σᵣ₌₁^{j−1} C(n,r) Oₙ₋ᵣ,ⱼ(μ)/q'(μ) + μ Σᵣ₌ⱼ₊₁ⁿ C(n,r) Oₙ₋ᵣ,ⱼ(μ)/q'(μ).
+
+Recent-window compatibility controls the first sum, but older rows can change sign at old roots. The missing all-index input is a quantitative domination bound for this entire older tail.
+
+## 8. A matrix-route obstruction
 
 Write `aₙ,ₘ = [tᵐ]Oₙ,ⱼ`, `Dⱼ = (1−Aⱼ)⁻¹`, and `hⱼ = (Cⱼ/zʲ)Dⱼ`. Then
 
@@ -136,9 +172,9 @@ Thus `R⁽ʲ⁾` is a proper Riordan array, but the target is a column shear. Ge
 
 > det R[{4,6},{0,1}] = det [[14,28],[3,132]] = −4.
 
-The target therefore requires a special sheared-minor theorem or a planar network for its weighted block-size paths; ordinary total positivity of `R⁽ʲ⁾` is not enough.
+The target therefore requires a special sheared-minor theorem or a planar network for its weighted block-size paths; ordinary total positivity of `R⁽ʲ⁾` is not enough. The natural weighted path digraph is also nonplanar; planarizing it yields a reflected, sign-twisted determinant inequality rather than the desired minors.
 
-## 7. Related ordered lifts are different
+## 9. Related ordered lifts are different
 
 Let Pₙ,ⱼ count ordinary set partitions by their large blocks. Its exponential generating function is e^{Bⱼ}. Ordering only the m large blocks replaces tᵐ by m!tᵐ, and therefore has exponential generating function
 
@@ -146,7 +182,7 @@ Let Pₙ,ⱼ count ordinary set partitions by their large blocks. Its exponentia
 
 This is **not** 1/(1 − Aⱼ − tCⱼ), which orders all blocks. The distinction is essential when applying theorems for restricted big-block families to the present conjecture.
 
-## 8. Rigorous finite certification
+## 10. Rigorous finite certification
 
 All coefficient generation uses integer arithmetic. Root isolation uses FLINT's integer-polynomial routine with Arb complex balls. A root is certified non-real when its imaginary ball excludes zero; a real-rooted verdict requires every returned root enclosure to lie on the real axis. Consecutive interlacing is checked by comparing rigorous lower and upper endpoints of ordered real-root balls, including every degree-increasing transition.
 
@@ -168,9 +204,13 @@ Partial `j = 3,4` scans reached `n = 525` and `n = 600`, respectively, but were 
 
 Wronskian reality is not used as an interlacing criterion. Sampled Wronskians can be nonreal even when the corresponding row pair passes the certified interlacing inequalities.
 
-## 9. Conclusion and remaining work
+## 11. Conclusion and remaining work
 
-The all-parameter conjecture is not inferred from finite computation. The proved identities above provide several possible starting points for an interlacing induction, while the certified computations identify the precise unchecked frontier.
+The all-parameter conjecture is not inferred from finite computation. The remaining consecutive-interlacing target is the root-sign inequality
+
+> Oₙ₊₁,ⱼ(μ) / Oₙ,ⱼ'(μ) < 0
+
+at every root `μ` of `Oₙ,ⱼ`. The lag-`j` WRS route is equivalently the negative-axis Wronskian inequality `W(Oₙ,ⱼ, Oₙ₋ⱼ,ⱼ)(t) > 0`, with the full older tail isolated as `W(Hₙ,ⱼ, Oₙ₋ⱼ,ⱼ)`. Standard PF, CZDS, Favard, Riordan-shear, planar-network, crossing-involution, threshold-renewal, and Bézout-positivity routes all have exact obstructions. Fixed-`K` edge asymptotics also do not control the `Θ(m)` middle zeros. The certified computations identify the precise unchecked frontier.
 
 ## References
 

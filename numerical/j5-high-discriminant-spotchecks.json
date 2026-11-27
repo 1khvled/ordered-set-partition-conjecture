@@ -1,0 +1,33 @@
+{
+  "checks": [
+    {
+      "j": 5,
+      "n": 400,
+      "degree": 80,
+      "discriminant_bits": 436697,
+      "match": true
+    },
+    {
+      "j": 5,
+      "n": 600,
+      "degree": 120,
+      "discriminant_bits": 1069328,
+      "match": true
+    },
+    {
+      "j": 5,
+      "n": 700,
+      "degree": 140,
+      "discriminant_bits": 1500122,
+      "match": true
+    },
+    {
+      "j": 5,
+      "n": 800,
+      "degree": 160,
+      "discriminant_bits": 2009734,
+      "match": true
+    }
+  ],
+  "all_match": true
+}

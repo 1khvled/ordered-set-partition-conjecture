@@ -104,7 +104,7 @@ Substitution into the first-block recurrence proves the identity. ∎
 
 The same coefficients appear in Chen–Zhu, *A Snail Race Problem* (2026), Theorems 3 and 7.
 
-## 6. A weighted root-separation reduction
+## 5. A weighted root-separation reduction
 
 Fix `n ≥ j`, and suppose the window `Oₙ₋ⱼ,ⱼ, ..., Oₙ₋₁,ⱼ` is commonly compatible. Put `q = Oₙ₋ⱼ,ⱼ`, `p = Oₙ₋₁,ⱼ`, `Sₙ = Σᵣ₌₂^{j−1} C(n,r)Oₙ₋ᵣ,ⱼ`, and `c = C(n−1,j−1)`. For every root `μ` of `q`, impose
 
@@ -119,6 +119,18 @@ Then `Oₙ,ⱼ` has `deg q + 1` distinct negative real roots and interlaces `q`.
 Thus (WRS) is exactly the assertion `sgn Oₙ,ⱼ(μ) = −sgn q'(μ)`. These signs alternate at the roots of `q`. Since `deg Oₙ,ⱼ = deg q + 1`, the signs at `−∞`, between consecutive roots of `q`, and at `0` force `deg q + 1` distinct roots by the intermediate value theorem. ∎
 
 Mere compatibility is insufficient. For `j = 2, n = 5`, take `p = (t+2)(t+4)` and `q = t+3`. Then `q` interlaces `p`, and also interlaces `R₅(p) = 9t²+42t+40`. Nevertheless, at `μ = −3`, the left side of (WRS) is `5` and the right side is `48`. The resulting test polynomial `17t²+50t+40` has discriminant `−220`. A successful induction must therefore prove the quantitative inequality (WRS), not only a compatible window.
+
+## 6. A matrix-route obstruction
+
+Write `aₙ,ₘ = [tᵐ]Oₙ,ⱼ`, `Dⱼ = (1−Aⱼ)⁻¹`, and `hⱼ = (Cⱼ/zʲ)Dⱼ`. Then
+
+> aₙ,ₘ/n! = R⁽ʲ⁾ₙ₋ⱼₘ,ₘ, where R⁽ʲ⁾q,ₘ = [zq]Dⱼ(z)hⱼ(z)ᵐ.
+
+Thus `R⁽ʲ⁾` is a proper Riordan array, but the target is a column shear. General shear preservation is false: there is a proper Riordan array `R` with a totally nonnegative production matrix for which
+
+> det R[{4,6},{0,1}] = det [[14,28],[3,132]] = −4.
+
+The target therefore requires a special sheared-minor theorem or a planar network for its weighted block-size paths; ordinary total positivity of `R⁽ʲ⁾` is not enough.
 
 ## 7. Related ordered lifts are different
 
@@ -158,4 +170,6 @@ The all-parameter conjecture is not inferred from finite computation. The proved
 
 1. P. Alexandersson. *Open problems on real-rootedness*. SymCat, 2026. https://www.symmetricfunctions.com/realRootedOpenProblems.htm#conjOrderedBigBlocks
 2. Y. Chen and W. Zhu. *A Snail Race Problem*. arXiv:2607.02085, 2026. https://arxiv.org/abs/2607.02085
-3. Public computational audit, Issue #108, 2026. https://github.com/1337isnot1337/solved-conjectures/issues/108
+3. X. Chen, H. Liang, and Y. Wang. *Total positivity of Riordan arrays*. arXiv:1601.05637, 2016. https://arxiv.org/abs/1601.05637
+4. X. Chen, L. Fu, and J. Ruan. *A unified planar network approach to total positivity of combinatorial matrices and real-rootedness of polynomials*. arXiv:2512.08369, 2025. https://arxiv.org/abs/2512.08369
+5. Public computational audit, Issue #108, 2026. https://github.com/1337isnot1337/solved-conjectures/issues/108

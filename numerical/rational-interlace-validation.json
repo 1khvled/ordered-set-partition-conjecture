@@ -1,0 +1,9 @@
+{
+  "jmin": 3,
+  "jmax": 8,
+  "nmax": 45,
+  "pairs": 270,
+  "failures": 0,
+  "methods": "SymPy exact rational real-root isolation; independent of FLINT/Arb",
+  "failure_records": []
+}

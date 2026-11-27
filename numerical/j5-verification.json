@@ -1,0 +1,23 @@
+{
+  "mode": "small",
+  "jmin": 5,
+  "jmax": 5,
+  "wide_start_multiplier": 7,
+  "wide_end_multiplier": 8,
+  "rows": 660,
+  "pairs": 660,
+  "exact_records": 660,
+  "failure_alerts": 0,
+  "discriminants_recomputed": 20,
+  "missing_rows": 0,
+  "missing_pairs": 0,
+  "contiguous_ranges": {
+    "5": {
+      "first_n": 141,
+      "last_contiguous_n": 800,
+      "complete": true
+    }
+  },
+  "errors": [],
+  "ok": true
+}

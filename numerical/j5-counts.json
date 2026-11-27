@@ -1,0 +1,42 @@
+{
+  "row_file": "j5-rows.jsonl",
+  "pair_file": "j5-pairs.jsonl",
+  "j": {
+    "5": {
+      "rows": 660,
+      "nmin": 141,
+      "nmax": 800,
+      "degree_min": 28,
+      "degree_max": 160,
+      "all_rows_certified": true,
+      "all_discriminants_positive": true,
+      "discriminant_bits_min": 41441,
+      "discriminant_bits_max": 2009734,
+      "newton_all_ok": true,
+      "newton_inequalities_checked": 61182,
+      "exact_sturm_rows": 43,
+      "arb_only_rows": 617,
+      "pairs": 660,
+      "left_nmin": 140,
+      "right_nmax": 800,
+      "all_pairs_certified": true,
+      "pair_prec_bits_min": 192,
+      "pair_prec_bits_max": 192,
+      "interval_comparisons": 122892,
+      "wronskian_checks": 13,
+      "wronskian_nonreal": 13
+    }
+  },
+  "totals": {
+    "rows": 660,
+    "pairs": 660,
+    "newton_inequalities_checked": 61182,
+    "exact_sturm_rows": 43,
+    "arb_only_rows": 617,
+    "interval_comparisons": 122892,
+    "wronskian_checks": 13,
+    "wronskian_nonreal": 13,
+    "all_rows_certified": true,
+    "all_pairs_certified": true
+  }
+}

@@ -1,0 +1,404 @@
+{
+  "seed": 108,
+  "random_cases": 250,
+  "cases": 262,
+  "sturm_mismatches": 0,
+  "mismatches": [],
+  "pseudo_rational_mismatches": 0,
+  "method_mismatches": [],
+  "negative_content_remainders_exercised": 0,
+  "known_j3_rows_ok": true,
+  "known_j3_rows": [
+    [
+      1
+    ],
+    [
+      1
+    ],
+    [
+      3
+    ],
+    [
+      12,
+      1
+    ],
+    [
+      66,
+      9
+    ]
+  ],
+  "ordered_rows_checked": 276,
+  "ordered_row_failures": 0,
+  "global_precision_before": 53,
+  "global_precision_after": 53,
+  "global_precision_unchanged": true,
+  "wronskian_crosschecks": [
+    {
+      "n": 0,
+      "ok": true
+    },
+    {
+      "n": 2,
+      "ok": true
+    },
+    {
+      "n": 4,
+      "ok": true
+    },
+    {
+      "n": 6,
+      "ok": false
+    },
+    {
+      "n": 8,
+      "ok": false
+    },
+    {
+      "n": 10,
+      "ok": false
+    }
+  ],
+  "wronskian_nonreal_crosschecks": [
+    {
+      "n": 6,
+      "result": {
+        "wronskian_degree": 2,
+        "common_degree": 0,
+        "wronskian_ok": false,
+        "wronskian": {
+          "degree": 2,
+          "ok": false,
+          "arb": {
+            "prec_bits": 192,
+            "imag_contains_zero_all": false,
+            "pairwise_disjoint": true,
+            "all_real_by_disjoint_arb": false,
+            "root_order_certified": false,
+            "nonreal_enclosures": [
+              {
+                "real": "[-4.47606674515854005115504851609760058462912589825829239576 +/- 1.44e-57]",
+                "imag": "[3.63668443019858498722930385791585248479239959851837846152 +/- 4.88e-57]",
+                "multiplicity": 1
+              },
+              {
+                "real": "[-4.47606674515854005115504851609760058462912589825829239576 +/- 1.44e-57]",
+                "imag": "[-3.63668443019858498722930385791585248479239959851837846152 +/- 4.88e-57]",
+                "multiplicity": 1
+              }
+            ],
+            "distinct_roots": 2,
+            "roots_with_multiplicity": 2
+          },
+          "discriminant_sign": -1,
+          "discriminant_bits": 42,
+          "sturm": {
+            "minus_inf": 1,
+            "zero": 1,
+            "plus_inf": 1,
+            "negative_distinct": 0,
+            "zero_roots": 0,
+            "positive_distinct": 0,
+            "real_distinct": 0,
+            "squarefree_degree": 2
+          },
+          "sturm_ok": false,
+          "arb_all_real_ok": false,
+          "certification_method": "exact_sturm",
+          "coefficients": [
+            8192430,
+            2205000,
+            246310
+          ],
+          "nonreal_refinement": {
+            "prec_bits": 192,
+            "imag_contains_zero_all": false,
+            "pairwise_disjoint": true,
+            "all_real_by_disjoint_arb": false,
+            "root_order_certified": false,
+            "nonreal_enclosures": [
+              {
+                "real": "[-4.47606674515854005115504851609760058462912589825829239576 +/- 1.44e-57]",
+                "imag": "[3.63668443019858498722930385791585248479239959851837846152 +/- 4.88e-57]",
+                "multiplicity": 1
+              },
+              {
+                "real": "[-4.47606674515854005115504851609760058462912589825829239576 +/- 1.44e-57]",
+                "imag": "[-3.63668443019858498722930385791585248479239959851837846152 +/- 4.88e-57]",
+                "multiplicity": 1
+              }
+            ],
+            "distinct_roots": 2,
+            "roots_with_multiplicity": 2,
+            "ok": true,
+            "expected_nonreal_multiplicity": 2,
+            "sturm": {
+              "minus_inf": 1,
+              "zero": 1,
+              "plus_inf": 1,
+              "negative_distinct": 0,
+              "zero_roots": 0,
+              "positive_distinct": 0,
+              "real_distinct": 0,
+              "squarefree_degree": 2
+            }
+          },
+          "_discriminant": -3209484733200
+        },
+        "ok": false,
+        "coefficients_f": [
+          3690,
+          973,
+          20
+        ],
+        "coefficients_g": [
+          35280,
+          11523,
+          490
+        ]
+      }
+    },
+    {
+      "n": 8,
+      "result": {
+        "wronskian_degree": 4,
+        "common_degree": 0,
+        "wronskian_ok": false,
+        "wronskian": {
+          "degree": 4,
+          "ok": false,
+          "arb": {
+            "prec_bits": 192,
+            "imag_contains_zero_all": false,
+            "pairwise_disjoint": true,
+            "all_real_by_disjoint_arb": false,
+            "root_order_certified": false,
+            "nonreal_enclosures": [
+              {
+                "real": "[-3.56691762513358038130897579761451003497258297038996835814 +/- 9.68e-58]",
+                "imag": "[1.48777006843925750962019810969230105378929342367791723918 +/- 2.34e-57]",
+                "multiplicity": 1
+              },
+              {
+                "real": "[-3.56691762513358038130897579761451003497258297038996835814 +/- 9.68e-58]",
+                "imag": "[-1.48777006843925750962019810969230105378929342367791723918 +/- 2.34e-57]",
+                "multiplicity": 1
+              },
+              {
+                "real": "[-11.0513829010796334171708526958565482382685006390428907337 +/- 4.60e-56]",
+                "imag": "[17.9504020532198149627923346182990830303808620120887170076 +/- 3.21e-56]",
+                "multiplicity": 1
+              },
+              {
+                "real": "[-11.0513829010796334171708526958565482382685006390428907337 +/- 4.60e-56]",
+                "imag": "[-17.9504020532198149627923346182990830303808620120887170076 +/- 3.21e-56]",
+                "multiplicity": 1
+              }
+            ],
+            "distinct_roots": 4,
+            "roots_with_multiplicity": 4
+          },
+          "discriminant_sign": 1,
+          "discriminant_bits": 192,
+          "sturm": {
+            "minus_inf": 2,
+            "zero": 2,
+            "plus_inf": 2,
+            "negative_distinct": 0,
+            "zero_roots": 0,
+            "positive_distinct": 0,
+            "real_distinct": 0,
+            "squarefree_degree": 4
+          },
+          "sturm_ok": false,
+          "arb_all_real_ok": false,
+          "certification_method": "exact_sturm",
+          "coefficients": [
+            114422459760,
+            60341500800,
+            10636555468,
+            504043680,
+            17240160
+          ],
+          "nonreal_refinement": {
+            "prec_bits": 192,
+            "imag_contains_zero_all": false,
+            "pairwise_disjoint": true,
+            "all_real_by_disjoint_arb": false,
+            "root_order_certified": false,
+            "nonreal_enclosures": [
+              {
+                "real": "[-3.56691762513358038130897579761451003497258297038996835814 +/- 9.68e-58]",
+                "imag": "[1.48777006843925750962019810969230105378929342367791723918 +/- 2.34e-57]",
+                "multiplicity": 1
+              },
+              {
+                "real": "[-3.56691762513358038130897579761451003497258297038996835814 +/- 9.68e-58]",
+                "imag": "[-1.48777006843925750962019810969230105378929342367791723918 +/- 2.34e-57]",
+                "multiplicity": 1
+              },
+              {
+                "real": "[-11.0513829010796334171708526958565482382685006390428907337 +/- 4.60e-56]",
+                "imag": "[17.9504020532198149627923346182990830303808620120887170076 +/- 3.21e-56]",
+                "multiplicity": 1
+              },
+              {
+                "real": "[-11.0513829010796334171708526958565482382685006390428907337 +/- 4.60e-56]",
+                "imag": "[-17.9504020532198149627923346182990830303808620120887170076 +/- 3.21e-56]",
+                "multiplicity": 1
+              }
+            ],
+            "distinct_roots": 4,
+            "roots_with_multiplicity": 4,
+            "ok": true,
+            "expected_nonreal_multiplicity": 4,
+            "sturm": {
+              "minus_inf": 2,
+              "zero": 2,
+              "plus_inf": 2,
+              "negative_distinct": 0,
+              "zero_roots": 0,
+              "positive_distinct": 0,
+              "real_distinct": 0,
+              "squarefree_degree": 4
+            }
+          },
+          "_discriminant": 6032206331489378295320558802824946349975693149221525913600
+        },
+        "ok": false,
+        "coefficients_f": [
+          385560,
+          150013,
+          10262
+        ],
+        "coefficients_g": [
+          4740120,
+          2141047,
+          204414,
+          1680
+        ]
+      }
+    },
+    {
+      "n": 10,
+      "result": {
+        "wronskian_degree": 4,
+        "common_degree": 0,
+        "wronskian_ok": false,
+        "wronskian": {
+          "degree": 4,
+          "ok": false,
+          "arb": {
+            "prec_bits": 192,
+            "imag_contains_zero_all": false,
+            "pairwise_disjoint": true,
+            "all_real_by_disjoint_arb": false,
+            "root_order_certified": false,
+            "nonreal_enclosures": [
+              {
+                "real": "[-3.13765056284440973727910272678049765802745966664083633901 +/- 9.75e-59]",
+                "imag": "[0.840109847527652123012101657955461174857891139693805872263 +/- 2.83e-58]",
+                "multiplicity": 1
+              },
+              {
+                "real": "[-3.13765056284440973727910272678049765802745966664083633901 +/- 9.75e-59]",
+                "imag": "[-0.840109847527652123012101657955461174857891139693805872263 +/- 2.83e-58]",
+                "multiplicity": 1
+              },
+              {
+                "real": "[-7.10517339105789158583335014127049392722126813080578162483 +/- 3.40e-57]",
+                "imag": "[5.16647581970783929625908408786133632945536620852877853617 +/- 3.19e-57]",
+                "multiplicity": 1
+              },
+              {
+                "real": "[-7.10517339105789158583335014127049392722126813080578162483 +/- 3.40e-57]",
+                "imag": "[-5.16647581970783929625908408786133632945536620852877853617 +/- 3.19e-57]",
+                "multiplicity": 1
+              }
+            ],
+            "distinct_roots": 4,
+            "roots_with_multiplicity": 4
+          },
+          "discriminant_sign": 1,
+          "discriminant_bits": 283,
+          "sturm": {
+            "minus_inf": 2,
+            "zero": 2,
+            "plus_inf": 2,
+            "negative_distinct": 0,
+            "zero_roots": 0,
+            "positive_distinct": 0,
+            "real_distinct": 0,
+            "squarefree_degree": 4
+          },
+          "sturm_ok": false,
+          "arb_all_real_ok": false,
+          "certification_method": "exact_sturm",
+          "coefficients": [
+            3942431654956200,
+            3070794010284000,
+            856511707229484,
+            99186646169940,
+            4841762711940
+          ],
+          "nonreal_refinement": {
+            "prec_bits": 192,
+            "imag_contains_zero_all": false,
+            "pairwise_disjoint": true,
+            "all_real_by_disjoint_arb": false,
+            "root_order_certified": false,
+            "nonreal_enclosures": [
+              {
+                "real": "[-3.13765056284440973727910272678049765802745966664083633901 +/- 9.75e-59]",
+                "imag": "[0.840109847527652123012101657955461174857891139693805872263 +/- 2.83e-58]",
+                "multiplicity": 1
+              },
+              {
+                "real": "[-3.13765056284440973727910272678049765802745966664083633901 +/- 9.75e-59]",
+                "imag": "[-0.840109847527652123012101657955461174857891139693805872263 +/- 2.83e-58]",
+                "multiplicity": 1
+              },
+              {
+                "real": "[-7.10517339105789158583335014127049392722126813080578162483 +/- 3.40e-57]",
+                "imag": "[5.16647581970783929625908408786133632945536620852877853617 +/- 3.19e-57]",
+                "multiplicity": 1
+              },
+              {
+                "real": "[-7.10517339105789158583335014127049392722126813080578162483 +/- 3.40e-57]",
+                "imag": "[-5.16647581970783929625908408786133632945536620852877853617 +/- 3.19e-57]",
+                "multiplicity": 1
+              }
+            ],
+            "distinct_roots": 4,
+            "roots_with_multiplicity": 4,
+            "ok": true,
+            "expected_nonreal_multiplicity": 4,
+            "sturm": {
+              "minus_inf": 2,
+              "zero": 2,
+              "plus_inf": 2,
+              "negative_distinct": 0,
+              "zero_roots": 0,
+              "positive_distinct": 0,
+              "real_distinct": 0,
+              "squarefree_degree": 4
+            }
+          },
+          "_discriminant": 12382239764358920868440139504218720900127160081527197394024244683190538259193387008000
+        },
+        "ok": false,
+        "coefficients_f": [
+          64751400,
+          33298401,
+          4117962,
+          79800
+        ],
+        "coefficients_g": [
+          972972000,
+          561236413,
+          85589790,
+          2834370
+        ]
+      }
+    }
+  ]
+}

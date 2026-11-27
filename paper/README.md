@@ -1,11 +1,12 @@
 # Manuscript
 
-The manuscript is being assembled from the independent numerical, proof,
-literature and Lean workstreams. Its final abstract will distinguish:
+The manuscript presents the proved coefficient/Riccati/universal recurrences,
+a rigorous weighted root-separation reduction, an exact obstruction to the
+naive compatible-window induction, and certified computational ranges.
 
-1. any proved all-parameter theorem;
-2. exact finite certificates and their checked ranges;
-3. computational negative results, if any;
-4. the remaining open cases.
+It does **not** claim a proof of the full all-parameter conjecture.
 
-No finite scan will be described as a proof of the full conjecture.
+- `main.tex` — LaTeX source.
+- `paper.md` — readable Markdown source.
+- `ordered-big-blocks-paper.pdf` — generated PDF.
+- `build_pdf.py` / `build.ps1` — PDF build without a TeX installation.

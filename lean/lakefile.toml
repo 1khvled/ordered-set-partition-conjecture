@@ -1,0 +1,10 @@
+name = "ordered-big-blocks"
+version = "0.1.0"
+defaultTargets = ["OrderedBigBlocks"]
+
+[leanOptions]
+autoImplicit = false
+relaxedAutoImplicit = false
+
+[[lean_lib]]
+name = "OrderedBigBlocks"

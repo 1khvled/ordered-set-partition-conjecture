@@ -201,6 +201,25 @@ of (WRS) is \(5\) and the right side is \(48\). The resulting test polynomial
 therefore prove the quantitative inequality (WRS), not only a compatible
 window.
 
+\section{A matrix-route obstruction}
+
+Write \(a_{n,m}=[t^m]\OO_{n,j}\), \(D_j=(1-A_j)^{-1}\), and
+\(h_j=(C_j/z^j)D_j\). Then
+\[
+\frac{a_{n,m}}{n!}=R^{(j)}_{n-jm,m},\qquad
+R^{(j)}_{q,m}=[z^q]D_j(z)h_j(z)^m.
+\]
+Thus \(R^{(j)}\) is a proper Riordan array, but the target is a column shear.
+General shear preservation is false: there is a proper Riordan array \(R\)
+with a totally nonnegative production matrix for which
+\[
+\det R[\{4,6\},\{0,1\}]
+=\det\begin{pmatrix}14&28\\3&132\end{pmatrix}=-4.
+\]
+The target therefore requires a special sheared-minor theorem or a planar
+network for its weighted block-size paths; ordinary total positivity of
+\(R^{(j)}\) is not enough.
+
 \section{Related ordered lifts are different}
 
 Let \(P_{n,j}\) count ordinary set partitions by their large blocks.  Its EGF
@@ -248,6 +267,16 @@ Y. Chen and W. Zhu.
 \newblock A Snail Race Problem.
 \newblock arXiv:2607.02085, 2026.
 \newblock \url{https://arxiv.org/abs/2607.02085}.
+
+\bibitem{ChenLW16}
+X. Chen, H. Liang, and Y. Wang.
+\newblock Total positivity of Riordan arrays.
+\newblock arXiv:1601.05637, 2016.
+
+\bibitem{ChenFR25}
+X. Chen, L. Fu, and J. Ruan.
+\newblock A unified planar network approach to total positivity of combinatorial matrices and real-rootedness of polynomials.
+\newblock arXiv:2512.08369, 2025.
 
 \bibitem{Issue108}
 \newblock Public computational audit, Issue \#108, 2026.

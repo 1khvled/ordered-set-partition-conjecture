@@ -1,0 +1,83 @@
+{
+  "checks": [
+    {
+      "j": 6,
+      "n": 48,
+      "degree": 8,
+      "discriminant_bits": 2586,
+      "match": true
+    },
+    {
+      "j": 6,
+      "n": 60,
+      "degree": 10,
+      "discriminant_bits": 4484,
+      "match": true
+    },
+    {
+      "j": 6,
+      "n": 71,
+      "degree": 11,
+      "discriminant_bits": 6326,
+      "match": true
+    },
+    {
+      "j": 10,
+      "n": 80,
+      "degree": 8,
+      "discriminant_bits": 4739,
+      "match": true
+    },
+    {
+      "j": 10,
+      "n": 100,
+      "degree": 10,
+      "discriminant_bits": 8174,
+      "match": true
+    },
+    {
+      "j": 30,
+      "n": 240,
+      "degree": 8,
+      "discriminant_bits": 16867,
+      "match": true
+    },
+    {
+      "j": 30,
+      "n": 300,
+      "degree": 10,
+      "discriminant_bits": 28820,
+      "match": true
+    },
+    {
+      "j": 30,
+      "n": 359,
+      "degree": 11,
+      "discriminant_bits": 41341,
+      "match": true
+    },
+    {
+      "j": 60,
+      "n": 480,
+      "degree": 8,
+      "discriminant_bits": 37047,
+      "match": true
+    },
+    {
+      "j": 60,
+      "n": 600,
+      "degree": 10,
+      "discriminant_bits": 62989,
+      "match": true
+    },
+    {
+      "j": 60,
+      "n": 719,
+      "degree": 11,
+      "discriminant_bits": 90568,
+      "match": true
+    }
+  ],
+  "all_match": true,
+  "seconds": 3.321119100000942
+}

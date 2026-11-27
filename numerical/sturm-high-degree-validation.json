@@ -1,0 +1,156 @@
+{
+  "cases": [
+    {
+      "case": 0,
+      "degree": 34,
+      "ok": true
+    },
+    {
+      "case": 1,
+      "degree": 37,
+      "ok": true
+    },
+    {
+      "case": 2,
+      "degree": 29,
+      "ok": true
+    },
+    {
+      "case": 3,
+      "degree": 23,
+      "ok": true
+    },
+    {
+      "case": 4,
+      "degree": 30,
+      "ok": true
+    },
+    {
+      "case": 5,
+      "degree": 31,
+      "ok": true
+    },
+    {
+      "case": 6,
+      "degree": 33,
+      "ok": true
+    },
+    {
+      "case": 7,
+      "degree": 23,
+      "ok": true
+    },
+    {
+      "case": 8,
+      "degree": 38,
+      "ok": true
+    },
+    {
+      "case": 9,
+      "degree": 26,
+      "ok": true
+    },
+    {
+      "case": 10,
+      "degree": 35,
+      "ok": true
+    },
+    {
+      "case": 11,
+      "degree": 35,
+      "ok": true
+    },
+    {
+      "case": 12,
+      "degree": 20,
+      "ok": true
+    },
+    {
+      "case": 13,
+      "degree": 39,
+      "ok": true
+    },
+    {
+      "case": 14,
+      "degree": 31,
+      "ok": true
+    },
+    {
+      "case": 15,
+      "degree": 40,
+      "ok": true
+    },
+    {
+      "case": 16,
+      "degree": 21,
+      "ok": true
+    },
+    {
+      "case": 17,
+      "degree": 23,
+      "ok": true
+    },
+    {
+      "case": 18,
+      "degree": 28,
+      "ok": true
+    },
+    {
+      "case": 19,
+      "degree": 37,
+      "ok": true
+    },
+    {
+      "case": 20,
+      "degree": 33,
+      "ok": true
+    },
+    {
+      "case": 21,
+      "degree": 21,
+      "ok": true
+    },
+    {
+      "case": 22,
+      "degree": 40,
+      "ok": true
+    },
+    {
+      "case": 23,
+      "degree": 31,
+      "ok": true
+    },
+    {
+      "case": 24,
+      "degree": 21,
+      "ok": true
+    },
+    {
+      "case": 25,
+      "degree": 33,
+      "ok": true
+    },
+    {
+      "case": 26,
+      "degree": 30,
+      "ok": true
+    },
+    {
+      "case": 27,
+      "degree": 37,
+      "ok": true
+    },
+    {
+      "case": 28,
+      "degree": 33,
+      "ok": true
+    },
+    {
+      "case": 29,
+      "degree": 29,
+      "ok": true
+    }
+  ],
+  "mismatches": [],
+  "seconds": 0.07107840000026044
+}

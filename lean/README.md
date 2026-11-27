@@ -1,37 +1,33 @@
 # Lean 4 source
 
-This directory contains a Mathlib-based formalization of:
+## Default build: verified and disk-safe
 
+The default library target imports only the dependency-free core and builds
+successfully:
+
+```powershell
+lake build
+```
+
+`OrderedBigBlocks/Core.lean` formalizes:
+
+- binomial coefficients and integer coefficient-list polynomials;
 - the first-block recurrence for `O_{n,j}`;
-- the exact EGF equation `(1 - B_j) F_j = 1`;
-- an executable rational Sturm chain;
-- a finite real-root certificate based on disjoint rational sign-change intervals.
+- the published initial `j=3` rows;
+- the ordered-Bell specialization at `t=1`.
 
-## Build status
-
-`OrderedBigBlocks/Core.lean` is dependency-free and **compiles successfully**
-with the installed Lean 4 toolchain:
+You can also check the core directly:
 
 ```powershell
 lean OrderedBigBlocks/Core.lean
 ```
 
-It formalizes the coefficient recurrence and verifies the initial `j = 3` rows
-and the ordered-Bell specialization.
+## Experimental Mathlib files
 
-The Mathlib files `Basic.lean` and `Sturm.lean` **have not compiled
-successfully**. The initial build attempt reported elaboration errors, and the
-local Mathlib dependency/build cache was removed after it grew to 6.83 GB.
-Those files are included as a transparent starting point, not as a verified
-formal proof of the conjecture.
+`OrderedBigBlocks/Basic.lean` and `OrderedBigBlocks/Sturm.lean` contain a more
+ambitious Mathlib-based EGF and Sturm-certificate development. They have **not
+compiled successfully** and are not imported by the default library target.
+Mathlib is deliberately not a default dependency, so building the verified
+core does not download or compile Mathlib.
 
-A future build will download and compile Mathlib again and may require several
-gigabytes of free disk space:
-
-```powershell
-cd lean
-lake build
-```
-
-Do not run this on a low-disk machine unless that space is available. The pinned
-dependency revisions remain in `lake-manifest.json`.
+The earlier local Mathlib cache was removed after it grew to 6.83 GB.

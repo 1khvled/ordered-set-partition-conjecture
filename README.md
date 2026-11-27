@@ -1,5 +1,7 @@
 # Ordered set partitions counted by big blocks
 
+![Exact regression tests](https://github.com/1khvled/ordered-set-partition-conjecture/actions/workflows/tests.yml/badge.svg)
+
 A reproducible exact-arithmetic attack on Per Alexandersson's 2026 conjecture
 
 \[
@@ -20,6 +22,7 @@ The conjecture asserts that every \(O_{n,j}\) is real-rooted and that
 > **Status:** research in progress. The universal differential recurrence is
 > proved, and the all-parameter real-rootedness/interlacing statement remains
 > open. Finite exact checks are evidence, not a proof of the full conjecture.
+> See [RESULTS.md](RESULTS.md) for the concise proved/computed status.
 
 ## Main proved recurrence and proof obstruction
 
@@ -71,7 +74,9 @@ O_6 = 3690 + 973t + 20t^2
 - `guess_recurrence.py` — exact search for short differential recurrences.
 - `numerical/` — independent corrected numerical audit and machine-readable logs.
 - `proof/` — proof-track identities, candidate recurrences and proof gaps.
-- `proof-shift/` — exact probes for the conditional lag-compatibility reduction.
+- `proof-weighted/` — rigorous weighted root-separation theorem and exact obstruction.
+- `proof-matrix/` — Riordan/shear factorization and an exact negative-minor obstruction.
+- `proof-shift/` — exact compatibility probes and the audit trail for a retracted lemma.
 - `literature.md` — sourced context and distinction from related ordered lifts.
 - `lean/` — a compiling dependency-free Lean recurrence plus Mathlib-based
   Sturm-certificate source that is not yet verified.
@@ -90,6 +95,18 @@ py -3.14 frontier.py --small-nmin 141 --small-nmax 600 --jmin 6 --jmax 60
 
 All final root decisions use rigorous Arb enclosures or exact Sturm arithmetic;
 float64 root finders are not used as certificates.
+
+## Lean 4
+
+The default Lean build is dependency-free and verified:
+
+```powershell
+cd lean
+lake build
+```
+
+Experimental Mathlib EGF/Sturm files are present but unverified and excluded
+from the default target.
 
 ## References
 

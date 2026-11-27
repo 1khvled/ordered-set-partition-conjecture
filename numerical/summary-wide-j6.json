@@ -1,0 +1,27 @@
+{
+  "mode": "wide",
+  "jmin": 6,
+  "jmax": 6,
+  "prec_bits": 192,
+  "wide_end_multiplier": 8,
+  "jobs": [
+    {
+      "mode": "wide",
+      "j": 6,
+      "nmin": 42,
+      "nmax": 47,
+      "rows_checked": 6,
+      "rows_resumed": 0,
+      "pairs_checked": 6,
+      "pairs_resumed": 0,
+      "exact_sturm_rows": 6,
+      "arb_only_rows": 0,
+      "wronskian_checks": 6,
+      "wronskian_nonreal": 6,
+      "failures": 0,
+      "min_discriminant_sign": 1,
+      "seconds": 0.065
+    }
+  ],
+  "total_seconds": 0.302
+}

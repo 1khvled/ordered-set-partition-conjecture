@@ -1,0 +1,21 @@
+{
+  "mode": "small",
+  "jmin": 3,
+  "jmax": 3,
+  "rows": 2,
+  "pairs": 2,
+  "exact_records": 2,
+  "failure_alerts": 0,
+  "discriminants_recomputed": 2,
+  "missing_rows": 0,
+  "missing_pairs": 0,
+  "contiguous_ranges": {
+    "3": {
+      "first_n": 141,
+      "last_contiguous_n": 142,
+      "complete": true
+    }
+  },
+  "errors": [],
+  "ok": true
+}

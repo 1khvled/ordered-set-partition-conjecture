@@ -1,0 +1,146 @@
+{
+  "synthetic_nonreal_row": {
+    "degree": 2,
+    "ok": false,
+    "arb": {
+      "prec_bits": 192,
+      "imag_contains_zero_all": false,
+      "pairwise_disjoint": true,
+      "all_real_by_disjoint_arb": false,
+      "root_order_certified": false,
+      "nonreal_enclosures": [
+        {
+          "real": "0",
+          "imag": "1.00000000000000000000000000000000000000000000000000000000",
+          "multiplicity": 1
+        },
+        {
+          "real": "0",
+          "imag": "-1.00000000000000000000000000000000000000000000000000000000",
+          "multiplicity": 1
+        }
+      ],
+      "distinct_roots": 2,
+      "roots_with_multiplicity": 2
+    },
+    "discriminant_sign": -1,
+    "discriminant_bits": 3,
+    "sturm": {
+      "minus_inf": 1,
+      "zero": 1,
+      "plus_inf": 1,
+      "negative_distinct": 0,
+      "zero_roots": 0,
+      "positive_distinct": 0,
+      "real_distinct": 0,
+      "squarefree_degree": 2
+    },
+    "sturm_ok": false,
+    "arb_all_real_ok": false,
+    "certification_method": "exact_sturm",
+    "coefficients": [
+      1,
+      0,
+      1
+    ],
+    "nonreal_refinement": {
+      "prec_bits": 192,
+      "imag_contains_zero_all": false,
+      "pairwise_disjoint": true,
+      "all_real_by_disjoint_arb": false,
+      "root_order_certified": false,
+      "nonreal_enclosures": [
+        {
+          "real": "0",
+          "imag": "1.00000000000000000000000000000000000000000000000000000000",
+          "multiplicity": 1
+        },
+        {
+          "real": "0",
+          "imag": "-1.00000000000000000000000000000000000000000000000000000000",
+          "multiplicity": 1
+        }
+      ],
+      "distinct_roots": 2,
+      "roots_with_multiplicity": 2,
+      "ok": true,
+      "expected_nonreal_multiplicity": 2,
+      "sturm": {
+        "minus_inf": 1,
+        "zero": 1,
+        "plus_inf": 1,
+        "negative_distinct": 0,
+        "zero_roots": 0,
+        "positive_distinct": 0,
+        "real_distinct": 0,
+        "squarefree_degree": 2
+      }
+    },
+    "_discriminant": -4
+  },
+  "synthetic_noninterlacing_pair": {
+    "degree_f": 2,
+    "degree_g": 2,
+    "common_degree": 0,
+    "f_real_rooted": true,
+    "g_real_rooted": true,
+    "arb_f": {
+      "prec_bits": 384,
+      "imag_contains_zero_all": true,
+      "pairwise_disjoint": true,
+      "all_real_by_disjoint_arb": true,
+      "root_order_certified": true,
+      "nonreal_enclosures": [],
+      "distinct_roots": 2,
+      "roots_with_multiplicity": 2
+    },
+    "arb_g": {
+      "prec_bits": 384,
+      "imag_contains_zero_all": true,
+      "pairwise_disjoint": true,
+      "all_real_by_disjoint_arb": true,
+      "root_order_certified": true,
+      "nonreal_enclosures": [],
+      "distinct_roots": 2,
+      "roots_with_multiplicity": 2
+    },
+    "comparisons": 3,
+    "certified": 1,
+    "ok": null,
+    "reason": "insufficient root separation precision",
+    "prec_bits": 384
+  },
+  "note": "Synthetic controls only; not conjecture rows.",
+  "synthetic_equal_degree_final_endpoint_control": {
+    "degree_f": 2,
+    "degree_g": 2,
+    "common_degree": 0,
+    "f_real_rooted": true,
+    "g_real_rooted": true,
+    "arb_f": {
+      "prec_bits": 192,
+      "imag_contains_zero_all": true,
+      "pairwise_disjoint": true,
+      "all_real_by_disjoint_arb": true,
+      "root_order_certified": true,
+      "nonreal_enclosures": [],
+      "distinct_roots": 2,
+      "roots_with_multiplicity": 2
+    },
+    "arb_g": {
+      "prec_bits": 192,
+      "imag_contains_zero_all": true,
+      "pairwise_disjoint": true,
+      "all_real_by_disjoint_arb": true,
+      "root_order_certified": true,
+      "nonreal_enclosures": [],
+      "distinct_roots": 2,
+      "roots_with_multiplicity": 2
+    },
+    "comparisons": 3,
+    "certified": 2,
+    "ok": null,
+    "reason": "insufficient root separation precision",
+    "prec_bits": 192
+  }
+}

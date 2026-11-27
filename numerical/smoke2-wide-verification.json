@@ -1,0 +1,21 @@
+{
+  "mode": "wide",
+  "jmin": 6,
+  "jmax": 6,
+  "rows": 6,
+  "pairs": 6,
+  "exact_records": 6,
+  "failure_alerts": 0,
+  "discriminants_recomputed": 6,
+  "missing_rows": 0,
+  "missing_pairs": 0,
+  "contiguous_ranges": {
+    "6": {
+      "first_n": 42,
+      "last_contiguous_n": 47,
+      "complete": true
+    }
+  },
+  "errors": [],
+  "ok": true
+}

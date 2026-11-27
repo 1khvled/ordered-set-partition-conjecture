@@ -104,7 +104,19 @@ Substitution into the first-block recurrence proves the identity. ∎
 
 The same coefficients appear in Chen–Zhu, *A Snail Race Problem* (2026), Theorems 3 and 7.
 
-## 5. Related ordered lifts are different
+## 5. A conditional real-rootedness reduction
+
+Fix `n ≥ j` and put
+
+> Aₙ = n Oₙ₋₁,ⱼ + 2T Oₙ₋₁,ⱼ + Σᵣ₌₂^{j−1} C(n,r) Oₙ₋ᵣ,ⱼ.
+
+Suppose `Q = Oₙ₋ⱼ,ⱼ` and `Aₙ` have simple negative roots and are compatible: if `deg Aₙ = deg Q + 1`, each root of `Q` lies between consecutive roots of `Aₙ`; if the degrees are equal, the roots of `Q` alternate to the left of those of `Aₙ`. Then `Oₙ,ⱼ` is real-rooted.
+
+**Proof.** The last differential term in the universal recurrence vanishes at every root `qᵢ` of `Q`, so `Oₙ,ⱼ(qᵢ) = Aₙ(qᵢ)`, and these signs alternate. In the degree-increasing case, the signs at `−∞` and at `q₁` are opposite, while `Oₙ,ⱼ(0) = Aₙ(0) > 0` and `Aₙ(qₑ) < 0`. The intermediate value theorem therefore gives one root left of `q₁`, one between every consecutive pair, and one right of `qₑ`. In the equal-degree case, `Oₙ,ⱼ` has one higher degree than `Aₙ`, which again forces the leftmost root. In both cases the count equals `deg Oₙ,ⱼ`. ∎
+
+Thus the all-row real-rootedness statement reduces to proving the single compatibility assertion between `Oₙ₋ⱼ,ⱼ` and `Aₙ`. Exact Arb checks verify this assertion for `2 ≤ j ≤ 15` and `n ≤ 100`; the general compatibility proof remains open.
+
+## 6. Related ordered lifts are different
 
 Let Pₙ,ⱼ count ordinary set partitions by their large blocks. Its exponential generating function is e^{Bⱼ}. Ordering only the m large blocks replaces tᵐ by m!tᵐ, and therefore has exponential generating function
 
@@ -112,7 +124,7 @@ Let Pₙ,ⱼ count ordinary set partitions by their large blocks. Its exponentia
 
 This is **not** 1/(1 − Aⱼ − tCⱼ), which orders all blocks. The distinction is essential when applying theorems for restricted big-block families to the present conjecture.
 
-## 6. Rigorous finite certification
+## 7. Rigorous finite certification
 
 All coefficient generation uses integer arithmetic. Root isolation uses FLINT's integer-polynomial routine with Arb complex balls. A root is certified non-real when its imaginary ball excludes zero; a real-rooted verdict requires every returned root enclosure to lie on the real axis. Consecutive interlacing is checked by comparing rigorous lower and upper endpoints of ordered real-root balls, including every degree-increasing transition.
 
@@ -120,7 +132,7 @@ Independent checks use exact Sturm sequences, exact discriminants, and Newton's 
 
 <!-- RESULTS -->
 
-## 7. Conclusion and remaining work
+## 8. Conclusion and remaining work
 
 The all-parameter conjecture is not inferred from finite computation. The proved identities above provide several possible starting points for an interlacing induction, while the certified computations identify the precise unchecked frontier.
 

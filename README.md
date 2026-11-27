@@ -17,9 +17,10 @@ B_j(z,t)=\sum_{r=1}^{j-1}\frac{z^r}{r!}
 The conjecture asserts that every \(O_{n,j}\) is real-rooted and that
 \(O_{n,j}\interl O_{n+1,j}\).
 
-> **Status:** research in progress. Finite exact checks are evidence, not a
-> proof of the all-parameter conjecture. This repository will state precisely
-> what is proved, what is certified computationally, and what remains open.
+> **Status:** research in progress. The universal differential recurrence and
+> a conditional real-rootedness reduction are proved. The all-parameter
+> compatibility/interlacing statement remains open. Finite exact checks are
+> evidence, not a proof of the full conjecture.
 
 ## Correct coefficient recurrence
 
@@ -56,8 +57,10 @@ O_6 = 3690 + 973t + 20t^2
 - `guess_recurrence.py` — exact search for short differential recurrences.
 - `numerical/` — independent corrected numerical audit and machine-readable logs.
 - `proof/` — proof-track identities, candidate recurrences and proof gaps.
+- `proof-shift/` — exact probes for the conditional lag-compatibility reduction.
 - `literature.md` — sourced context and distinction from related ordered lifts.
-- `lean/` — Lean 4 definitions and finite Sturm-certificate infrastructure.
+- `lean/` — a compiling dependency-free Lean recurrence plus Mathlib-based
+  Sturm-certificate source that is not yet verified.
 - `paper/` — manuscript source and build instructions.
 
 ## Python environment

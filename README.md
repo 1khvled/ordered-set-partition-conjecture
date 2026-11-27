@@ -17,10 +17,24 @@ B_j(z,t)=\sum_{r=1}^{j-1}\frac{z^r}{r!}
 The conjecture asserts that every \(O_{n,j}\) is real-rooted and that
 \(O_{n,j}\interl O_{n+1,j}\).
 
-> **Status:** research in progress. The universal differential recurrence and
-> a conditional real-rootedness reduction are proved. The all-parameter
-> compatibility/interlacing statement remains open. Finite exact checks are
-> evidence, not a proof of the full conjecture.
+> **Status:** research in progress. The universal differential recurrence is
+> proved, and the all-parameter real-rootedness/interlacing statement remains
+> open. Finite exact checks are evidence, not a proof of the full conjecture.
+
+## Main proved recurrence and proof obstruction
+
+The universal recurrence is
+\[
+O_{n,j}=nO_{n-1,j}+2T O_{n-1,j}
++\sum_{r=2}^{j-1}\binom nr O_{n-r,j}
++\binom{n-1}{j-1}t[1+(t-1)\partial_t]O_{n-j,j},
+\quad T=t\partial_t.
+\]
+A naive compatible-window induction fails: compatibility of the lagged row
+with the main part is not enough, because the derivative term does not vanish
+at the lagged row's zeros. A rigorous weighted root-separation inequality is
+given in `proof-weighted/NOTES.md`, together with an explicit obstruction to
+the unweighted version.
 
 ## Correct coefficient recurrence
 

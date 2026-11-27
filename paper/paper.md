@@ -6,7 +6,7 @@
 
 ### Abstract
 
-We study Per Alexandersson's ordered big-block conjecture. We derive an integer convolution recurrence, a Riccati differential equation, and an equivalent positive-coefficient Riccati form. We describe rigorous exact methods for deciding real-rootedness and consecutive interlacing, and record the independently checked parameter ranges. The distinction between ordering all blocks and ordering only the large blocks is made explicit. Finite certificates are not presented as a proof of the all-parameter conjecture.
+We study Per Alexandersson's ordered big-block conjecture. We derive an integer convolution recurrence, a universal differential recurrence, a Riccati differential equation, a weighted root-separation reduction, and an exact obstruction to a naive compatible-window induction. We describe rigorous exact methods for deciding real-rootedness and consecutive interlacing, and record the independently checked parameter ranges. The distinction between ordering all blocks and ordering only the large blocks is made explicit. Finite certificates are not presented as a proof of the all-parameter conjecture.
 
 ## 1. Definitions and conjecture
 
@@ -76,7 +76,7 @@ The final term is signed. An equivalent form exposes nonnegative structural coef
 
 > Fⱼ' = (Bⱼ + Bⱼ' − 1)Fⱼ² + Fⱼ.
 
-Indeed, if bᵣ = 1 for r < j and bᵣ = t for r ≥ j, then the coefficient of zᑫ/q! in Bⱼ + Bⱼ' − 1 is 0 for q = 0, q + 2 for 1 ≤ q < j−1, 1 + jt for q = j−1, and (q + 2)t for q ≥ j.
+Indeed, if bᵣ = 1 for r < j and bᵣ = t for r ≥ j, then the coefficient of zᑫ/q! in Bⱼ + Bⱼ' − 1 is 0 for q = 0, 2 for 1 ≤ q < j−1, 1 + t for q = j−1, and 2t for q ≥ j.
 
 ## 4. A universal short recurrence
 
@@ -104,19 +104,23 @@ Substitution into the first-block recurrence proves the identity. ∎
 
 The same coefficients appear in Chen–Zhu, *A Snail Race Problem* (2026), Theorems 3 and 7.
 
-## 5. A conditional real-rootedness reduction
+## 6. A weighted root-separation reduction
 
-Fix `n ≥ j` and put
+Fix `n ≥ j`, and suppose the window `Oₙ₋ⱼ,ⱼ, ..., Oₙ₋₁,ⱼ` is commonly compatible. Put `q = Oₙ₋ⱼ,ⱼ`, `p = Oₙ₋₁,ⱼ`, `Sₙ = Σᵣ₌₂^{j−1} C(n,r)Oₙ₋ᵣ,ⱼ`, and `c = C(n−1,j−1)`. For every root `μ` of `q`, impose
 
-> Aₙ = n Oₙ₋₁,ⱼ + 2T Oₙ₋₁,ⱼ + Σᵣ₌₂^{j−1} C(n,r) Oₙ₋ᵣ,ⱼ.
+> −[n p(μ) + 2μ p'(μ) + Sₙ(μ)] / q'(μ) > c μ(μ−1). (WRS)
 
-Suppose `Q = Oₙ₋ⱼ,ⱼ` and `Aₙ` have simple negative roots and are compatible: if `deg Aₙ = deg Q + 1`, each root of `Q` lies between consecutive roots of `Aₙ`; if the degrees are equal, the roots of `Q` alternate to the left of those of `Aₙ`. Then `Oₙ,ⱼ` is real-rooted.
+Then `Oₙ,ⱼ` has `deg q + 1` distinct negative real roots and interlaces `q`.
 
-**Proof.** The last differential term in the universal recurrence vanishes at every root `qᵢ` of `Q`, so `Oₙ,ⱼ(qᵢ) = Aₙ(qᵢ)`, and these signs alternate. In the degree-increasing case, the signs at `−∞` and at `q₁` are opposite, while `Oₙ,ⱼ(0) = Aₙ(0) > 0` and `Aₙ(qₑ) < 0`. The intermediate value theorem therefore gives one root left of `q₁`, one between every consecutive pair, and one right of `qₑ`. In the equal-degree case, `Oₙ,ⱼ` has one higher degree than `Aₙ`, which again forces the leftmost root. In both cases the count equals `deg Oₙ,ⱼ`. ∎
+**Proof.** At a root `μ` of `q`,
 
-Thus the all-row real-rootedness statement reduces to proving the single compatibility assertion between `Oₙ₋ⱼ,ⱼ` and `Aₙ`. Exact Arb checks verify this assertion for `2 ≤ j ≤ 15` and `n ≤ 100`; the general compatibility proof remains open.
+> t[1 + (t−1)∂ₜ]q evaluated at t=μ equals μ(μ−1)q'(μ).
 
-## 6. Related ordered lifts are different
+Thus (WRS) is exactly the assertion `sgn Oₙ,ⱼ(μ) = −sgn q'(μ)`. These signs alternate at the roots of `q`. Since `deg Oₙ,ⱼ = deg q + 1`, the signs at `−∞`, between consecutive roots of `q`, and at `0` force `deg q + 1` distinct roots by the intermediate value theorem. ∎
+
+Mere compatibility is insufficient. For `j = 2, n = 5`, take `p = (t+2)(t+4)` and `q = t+3`. Then `q` interlaces `p`, and also interlaces `R₅(p) = 9t²+42t+40`. Nevertheless, at `μ = −3`, the left side of (WRS) is `5` and the right side is `48`. The resulting test polynomial `17t²+50t+40` has discriminant `−220`. A successful induction must therefore prove the quantitative inequality (WRS), not only a compatible window.
+
+## 7. Related ordered lifts are different
 
 Let Pₙ,ⱼ count ordinary set partitions by their large blocks. Its exponential generating function is e^{Bⱼ}. Ordering only the m large blocks replaces tᵐ by m!tᵐ, and therefore has exponential generating function
 
@@ -124,15 +128,29 @@ Let Pₙ,ⱼ count ordinary set partitions by their large blocks. Its exponentia
 
 This is **not** 1/(1 − Aⱼ − tCⱼ), which orders all blocks. The distinction is essential when applying theorems for restricted big-block families to the present conjecture.
 
-## 7. Rigorous finite certification
+## 8. Rigorous finite certification
 
 All coefficient generation uses integer arithmetic. Root isolation uses FLINT's integer-polynomial routine with Arb complex balls. A root is certified non-real when its imaginary ball excludes zero; a real-rooted verdict requires every returned root enclosure to lie on the real axis. Consecutive interlacing is checked by comparing rigorous lower and upper endpoints of ordered real-root balls, including every degree-increasing transition.
 
 Independent checks use exact Sturm sequences, exact discriminants, and Newton's ultra-log-concavity inequalities. A negative discriminant is an immediate obstruction; a zero discriminant is not, since repeated real roots are allowed. Floating-point root finders are never used as certificates.
 
-<!-- RESULTS -->
+### Audited ranges
 
-## 8. Conclusion and remaining work
+All coefficient arithmetic is integral. Real-rootedness and interlacing are certified with rigorous Arb balls; exact Sturm counts, discriminants, and Newton inequalities provide independent checks. No float64 root finder is used. The new scan omits `j = 2` as requested.
+
+| Range | Rows | Consecutive pairs | Exact Sturm rows |
+|---|---:|---:|---:|
+| `j = 3..8`, `0 ≤ n ≤ 45` | 276 | 270 | 276 |
+| `j = 5`, `141 ≤ n ≤ 800` | 660 | 660 | 43 |
+| `j = 6..60`, `7j ≤ n ≤ 12j−1` | 9,075 | 9,075 | 9,075 |
+
+No failure was found. The `j = 5` audit checked 61,182 Newton inequalities and 122,892 certified interval comparisons. The wide audit checked 72,600 Newton inequalities and 154,000 interval comparisons. Every wide-range row received an exact Sturm count. A total of 5,012 Sturm controls were cross-checked against SymPy and an independent rational implementation.
+
+Partial `j = 3,4` scans reached `n = 525` and `n = 600`, respectively, but were not audited and are not claimed. Full per-row logs are regenerable from the supplied scripts; compact hash/count certificates are retained.
+
+Wronskian reality is not used as an interlacing criterion. Sampled Wronskians can be nonreal even when the corresponding row pair passes the certified interlacing inequalities.
+
+## 9. Conclusion and remaining work
 
 The all-parameter conjecture is not inferred from finite computation. The proved identities above provide several possible starting points for an interlacing induction, while the certified computations identify the precise unchecked frontier.
 

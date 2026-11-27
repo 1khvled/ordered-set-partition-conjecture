@@ -113,15 +113,7 @@ Because `\widehat B_jG_j^2=G_j^2-G_j`, equations (5)–(6) imply
  \boxed{G_j'=\bigl(2+(t-1)w_j\bigr)G_j^2-G_j.} \tag{7}
 \]
 
-This is the Riccati identity quoted in the prompt, but it belongs to `G_j`, not to the literal `F_j`.
-
-For the literal `F_j=1/(1-B_j)`, the corresponding correct identity is
-
-\[
- \boxed{F_j'=\bigl(2-t+(t-1)w_j\bigr)F_j^2-F_j.} \tag{8}
-\]
-
-The missing `-t` in the prompt's literal-`F` version is exactly the constant-term correction `B_j=\widehat B_j+t`.
+Since `G_j=F_j` and `\widehat B_j=B_j`, this is precisely the Riccati identity for the original series `F_j=1/(1-B_j)`.
 
 ### 2.4 Coefficient form involving `H_n` — PROVED
 
@@ -141,13 +133,6 @@ Taking `n![z^n]` in (7) gives
 \]
 
 where `H_k=0` for `k<0`.
-
-For literal `F`, if `H_n^F=n![z^n]F_j^2`, equation (8) instead gives
-
-\[
- f_{n+1}=(2-t)H_n^F-f_n
- +(t-1)\binom n{j-1}H^F_{n-j+1}. \tag{9F}
-\]
 
 ---
 

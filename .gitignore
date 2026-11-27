@@ -13,6 +13,9 @@ lean/.git/
 
 # Large machine-generated root enclosures can be regenerated.
 numerical/root-enclosures/
+numerical/*-exact.jsonl.gz
+numerical/*-rows.jsonl
+numerical/*-pairs.jsonl
 
 # TeX build artifacts (the PDF itself is committed).
 paper/*.aux

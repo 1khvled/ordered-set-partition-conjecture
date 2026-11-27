@@ -1,4 +1,32 @@
-% Draft placeholder. Replaced only after the independent audits report.
-\section{Computational results}
-The computational result tables are being generated from the validated
-JSONL audit logs.
+\section{Certified computational ranges}
+
+All coefficient arithmetic is integral. Real-rootedness and interlacing are
+certified with rigorous Arb balls; exact Sturm counts, discriminants, and
+Newton inequalities provide independent checks. No float64 root finder is
+used. The parameter \(j=2\) is omitted from the new scan as requested.
+
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+Range & Rows & Consecutive pairs & Exact Sturm rows \\
+\midrule
+\(j=3,\ldots,8,\ 0\le n\le45\) & 276 & 270 & 276 \\
+\(j=5,\ 141\le n\le800\) & 660 & 660 & 43 \\
+\(j=6,\ldots,60,\ 7j\le n\le12j-1\) & 9{,}075 & 9{,}075 & 9{,}075 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+No failure was found. The \(j=5\) audit checked 61,182 Newton inequalities and
+122,892 certified interval comparisons. The wide audit checked 72,600 Newton
+inequalities and 154,000 interval comparisons. Every wide-range row received
+an exact Sturm count. A total of 5,012 Sturm controls were cross-checked
+against SymPy and an independent rational implementation.
+
+Partial \(j=3,4\) scans reached \(n=525\) and \(n=600\), respectively, but
+were not audited and are not claimed. Full per-row logs are regenerable from
+the supplied scripts; compact hash/count certificates are retained.
+
+Wronskian reality is not used as an interlacing criterion. Sampled Wronskians
+can be nonreal even when the corresponding row pair passes the certified
+interlacing inequalities.

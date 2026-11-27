@@ -15,7 +15,7 @@
 \newcommand{\RR}{\mathbb R}
 \newcommand{\ZZ}{\mathbb Z}
 \newcommand{\OO}{O}
-\newcommand{\interl}{\interl}
+\newcommand{\interl}{\mathrel{\preceq}}
 
 \title{Ordered Set Partitions Counted by Big Blocks:\\
 Exact Recurrences and Certified Computational Evidence}
@@ -27,8 +27,10 @@ Exact Recurrences and Certified Computational Evidence}
 
 \begin{abstract}
 We study Per Alexandersson's ordered big-block conjecture.  We derive an
-integer convolution recurrence, a Riccati differential equation, and an
-equivalent positive-coefficient Riccati form.  We describe rigorous exact
+integer convolution recurrence, a universal differential recurrence, a
+Riccati differential equation, a weighted root-separation reduction, and an
+exact obstruction to a naive compatible-window induction.
+We describe rigorous exact
 methods for deciding real-rootedness and consecutive interlacing, and record
 the independently checked parameter ranges.  The distinction between ordering
 all blocks and ordering only the large blocks is made explicit.  Finite
@@ -123,8 +125,8 @@ F_j'=(B_j+B_j'-1)F_j^2+F_j.
 \]
 Indeed, if \(b_r=1\) for \(r<j\) and \(b_r=t\) for \(r\ge j\), then the
 coefficient of \(z^q/q!\) in \(B_j+B_j'-1\) is \(0\) for \(q=0\),
-\(q+2\) for \(1\le q<j-1\), \(1+jt\) for \(q=j-1\), and
-\((q+2)t\) for \(q\ge j\).
+\(2\) for \(1\le q<j-1\), \(1+t\) for \(q=j-1\), and
+\(2t\) for \(q\ge j\).
 
 \section{A universal short recurrence}
 
@@ -163,32 +165,41 @@ Substitution into the first-block recurrence proves the formula.
 The same coefficient family, in the snail-race interpretation, appears in
 Chen--Zhu, \emph{A Snail Race Problem} (2026), Theorem 3 and Theorem 7.
 
-\section{A conditional real-rootedness reduction}
+\section{A weighted root-separation reduction}
 
-Fix \(n\ge j\) and put
+Fix \(n\ge j\), and suppose the window
+\(\OO_{n-j,j},\ldots,\OO_{n-1,j}\) is commonly compatible. Put
 \[
-A_n=n\OO_{n-1,j}+2T\OO_{n-1,j}
-+\sum_{r=2}^{j-1}\binom nr\OO_{n-r,j}.
+q=\OO_{n-j,j},\quad p=\OO_{n-1,j},\quad
+S_n=\sum_{r=2}^{j-1}\binom nr\OO_{n-r,j},\quad
+c=\binom{n-1}{j-1}.
 \]
-Suppose \(Q=\OO_{n-j,j}\) and \(A_n\) have simple negative roots and are
-compatible: if \(\deg A_n=\deg Q+1\), each root of \(Q\) lies between
-consecutive roots of \(A_n\); if the degrees are equal, the roots of \(Q\)
-alternate to the left of those of \(A_n\). Then \(\OO_{n,j}\) is real-rooted.
+For every root \(\mu\) of \(q\), impose the weighted root-separation inequality
+\[
+-\frac{n p(\mu)+2\mu p'(\mu)+S_n(\mu)}{q'(\mu)}
+>c\mu(\mu-1). \tag{WRS}
+\]
+Then \(\OO_{n,j}\) has \(\deg q+1\) distinct negative real roots and
+interlaces \(q\).
 
-Indeed, the last differential term in the universal recurrence vanishes at
-every root \(q_i\) of \(Q\), so \(\OO_{n,j}(q_i)=A_n(q_i)\), and these signs
-alternate. In the degree-increasing case, the signs at \(-\infty\) and at
-\(q_1\) are opposite, while \(\OO_{n,j}(0)=A_n(0)>0\) and \(A_n(q_e)<0\).
-The intermediate value theorem therefore gives one root left of \(q_1\),
-one between every consecutive pair, and one right of \(q_e\). In the
-equal-degree case, \(\OO_{n,j}\) has one higher degree than \(A_n\), which
-again forces the leftmost root. In both cases the count equals
-\(\deg\OO_{n,j}\).
+Indeed, at a root \(\mu\) of \(q\),
+\[
+t[1+(t-1)\partial_t]q\big|_{t=\mu}=\mu(\mu-1)q'(\mu).
+\]
+Thus (WRS) is exactly the assertion
+\(\operatorname{sgn}\OO_{n,j}(\mu)=-\operatorname{sgn}q'(\mu)\).
+These signs alternate at the roots of \(q\). Since
+\(\deg\OO_{n,j}=\deg q+1\), the signs at \(-\infty\), between consecutive
+roots of \(q\), and at \(0\) force \(\deg q+1\) distinct roots by the
+intermediate value theorem.
 
-Thus the all-row real-rootedness statement reduces to proving the single
-compatibility assertion between \(\OO_{n-j,j}\) and \(A_n\). Exact Arb checks
-verify this assertion for \(2\le j\le15\) and \(n\le100\); the general
-compatibility proof remains open.
+Mere compatibility is insufficient. For \(j=2,n=5\), take
+\(p=(t+2)(t+4)\) and \(q=t+3\). Then \(q\) interlaces \(p\), and also
+interlaces \(R_5(p)=9t^2+42t+40\). Nevertheless, at \(\mu=-3\), the left side
+of (WRS) is \(5\) and the right side is \(48\). The resulting test polynomial
+\(17t^2+50t+40\) has discriminant \(-220\). A successful induction must
+therefore prove the quantitative inequality (WRS), not only a compatible
+window.
 
 \section{Related ordered lifts are different}
 

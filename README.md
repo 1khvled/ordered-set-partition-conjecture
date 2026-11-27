@@ -91,10 +91,12 @@ O_6 = 3690 + 973t + 20t^2
   and branching-coupling constructions, with the exact non-positive
   coefficient-extraction obstruction.
 - `proof-j2-base/`, `proof-j2-resultants/`, `proof-associated-stirling/`,
-  `proof-associated-stirling-lit/`, `proof-associated-stirling-slc/` — the
-  \(j=2\) deformation, resultant equivalence, literature check, and the
-  associated-Stirling reduction of the remaining ratio inequality to a single
-  cross term.
+  `proof-associated-stirling-lit/`, `proof-associated-stirling-slc/`,
+  `proof-factorial-row/` — the \(j=2\) deformation, resultant equivalence,
+  literature check, and the associated-Stirling reduction of the remaining
+  ratio inequality to a single cross term or to one operator-preservation lemma.
+- `proof-j2-highn/` — new certified high-row search for \(j=2\), disjoint from
+  the other counterexample hunts.
 - `proof-automated-consecutive/`, `proof-hurwitz-wronskian/` — exact finite
   discovery of the consecutive-Wronskian invariant and its Routh/Hermite
   obstructions; numerical left-half-plane evidence is not used as a certificate.

@@ -35,7 +35,8 @@ def main():
                     bad.append("nonreal root enclosure")
                 if rec.get("newton_failure"):
                     bad.append("Newton inequality")
-                if rec.get("discriminant_sign", 1) < 0:
+                disc_sign = rec.get("discriminant_sign")
+                if disc_sign is not None and disc_sign < 0:
                     bad.append("negative discriminant")
                 if rec.get("ok") is False:
                     bad.append("interlacing inequality")

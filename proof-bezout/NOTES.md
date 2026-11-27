@@ -273,7 +273,7 @@ For the checked ranges
 all those minors are positive. For example, at `j=2,n=5`,
 
 \[
- q=6+7t,\qquad O_5=120+367t+54t^2,
+ q=6+7t,\qquad O_5=120+311t+110t^2,
 \]
 
 and

@@ -19,6 +19,7 @@ def main():
     ap.add_argument("--prec", type=int, default=192)
     ap.add_argument("--out", type=Path, required=True)
     ap.add_argument("--summary", type=Path, required=True)
+    ap.add_argument("--fast", action="store_true", help="skip full discriminants and thin exact-Sturm schedule")
     args = ap.parse_args()
     if args.mode == "j5":
         jobs = [(5, 141, 800)]
@@ -38,12 +39,19 @@ def main():
                     prev = coeffs
                     continue
                 p = fmpz_poly(coeffs)
-                disc = p.discriminant() if p.degree() else 1
+                if args.fast:
+                    disc = None
+                    disc_sign = None
+                    disc_hash = None
+                else:
+                    disc = p.discriminant() if p.degree() else 1
+                    disc_sign = (disc > 0) - (disc < 0)
+                    disc_hash = hashlib.sha256(str(disc).encode()).hexdigest()
                 rec = {
                     "kind": "row", "j": j, "n": n, "degree": p.degree(),
                     "sha256": digest(coeffs),
-                    "discriminant_sign": (disc > 0) - (disc < 0),
-                    "discriminant_sha256": hashlib.sha256(str(disc).encode()).hexdigest(),
+                    "discriminant_sign": disc_sign,
+                    "discriminant_sha256": disc_hash,
                     "newton_ok": newton_failure(coeffs) is None,
                 }
                 bad = nonreal_roots(coeffs, args.prec)
@@ -51,7 +59,7 @@ def main():
                 if bad:
                     rec["nonreal"] = [{"real": str(r.real), "imag": str(r.imag), "multiplicity": m} for r, m in bad]
                 # Exact Sturm on every wide row; on j=5 use a fixed schedule plus endpoints.
-                if args.mode == "wide" or n == lo or n == hi or n % 15 == 0:
+                if (not args.fast and args.mode == "wide") or n == lo or n == hi or n % (30 if args.fast else 15) == 0:
                     vm = sturm_variations(coeffs, minus_inf=True)
                     vp = sturm_variations(coeffs)
                     rec["sturm_distinct_real_roots"] = vm - vp
@@ -67,7 +75,7 @@ def main():
                         pair["coefficients_f"] = prev
                         pair["coefficients_g"] = coeffs
                         out.write(json.dumps(pair, separators=(",", ":")) + "\n")
-                row_bad = bad or disc < 0 or not rec["newton_ok"] or rec.get("sturm_complete") is False
+                row_bad = bad or (disc is not None and disc < 0) or not rec["newton_ok"] or rec.get("sturm_complete") is False
                 if row_bad:
                     failures += 1
                     rec["coefficients"] = coeffs
@@ -78,7 +86,7 @@ def main():
             per_j[str(j)] = count
             print(f"j={j} rows={count} total_rows={rows} failures={failures} elapsed={time.monotonic()-start:.1f}s", flush=True)
     summary = {
-        "mode": args.mode, "precision_bits": args.prec, "rows": rows, "pairs": pairs,
+        "mode": args.mode, "fast": args.fast, "precision_bits": args.prec, "rows": rows, "pairs": pairs,
         "exact_sturm_rows": sturm_rows, "failures": failures, "per_j": per_j,
         "seconds": round(time.monotonic()-start, 3), "ok": failures == 0,
     }

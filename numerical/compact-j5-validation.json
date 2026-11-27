@@ -1,0 +1,13 @@
+{
+  "total_records": 1320,
+  "by_j": {
+    "5": {
+      "count": 1320,
+      "min_n": 140,
+      "max_n": 800,
+      "max_degree": 160,
+      "failures": []
+    }
+  },
+  "total_failure_records": 0
+}

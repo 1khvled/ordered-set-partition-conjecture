@@ -1,0 +1,14 @@
+{
+  "mode": "j5",
+  "fast": true,
+  "precision_bits": 192,
+  "rows": 660,
+  "pairs": 660,
+  "exact_sturm_rows": 24,
+  "failures": 0,
+  "per_j": {
+    "5": 660
+  },
+  "seconds": 5096.085,
+  "ok": true
+}

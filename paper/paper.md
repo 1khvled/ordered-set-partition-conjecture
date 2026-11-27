@@ -212,6 +212,10 @@ The all-parameter conjecture is not inferred from finite computation. The remain
 
 at every root `μ` of `Oₙ,ⱼ`. The lag-`j` WRS route is equivalently the negative-axis Wronskian inequality `W(Oₙ,ⱼ, Oₙ₋ⱼ,ⱼ)(t) > 0`, with the full older tail isolated as `W(Hₙ,ⱼ, Oₙ₋ⱼ,ⱼ)`. Standard PF, CZDS, Favard, Riordan-shear, planar-network, crossing-involution, threshold-renewal, and Bézout-positivity routes all have exact obstructions. Fixed-`K` edge asymptotics also do not control the `Θ(m)` middle zeros. The certified computations identify the precise unchecked frontier.
 
+Further reductions were established in November 2026. Under the standing simple-negative-root induction, global Wronskian positivity, negative residue signs, Pick/Bezoutian positivity, and the WRS margin are equivalent; hence a Pick-format proof would not be weaker than the original problem. The all-lag version decomposes into same-lag induction terms, a cross-family boundary term `W(Hₙ,ⱼ, Oₙ₋ⱼ,ⱼ)`, and, for lags below `j`, an explicit signed domination with subtracted older-lag terms. The chapter renewal admits a positive two-state Möbius flow, but coefficient extraction is not positive on the resulting Pick cone. A constructed branching coupling reduces the boundary problem to a residue-mass sum; its positivity is equivalent to aligned interlacing of the inner and outer rows.
+
+For `j = 2`, the deformation `F(x,z,t) = 1/(1 − xz − t(eᶻ−1−z))` has a Fibonacci-polynomial limit as `x → ∞`. Nonvanishing of every discriminant and consecutive resultant for all `x > 0` is equivalent to the all-parameter `j = 2` conjecture itself. The remaining coefficient-level inequality reduces exactly to `Dₘ,ₖ = mE′ₘ,ₖ` and the two-step recurrence `E′ₘ,ₖ = SLC(m−1,k) + (m−1)Δ(m−1,k−1) + (m−1)(m−2)E′ₘ₋₂,ₖ₋₁`; the missing ingredient is a proof of the single-row strong log-concavity term or of the displayed forcing term. Exact finite checks through `m = 300` support it but do not prove it.
+
 ## References
 
 1. P. Alexandersson. *Open problems on real-rootedness*. SymCat, 2026. https://www.symmetricfunctions.com/realRootedOpenProblems.htm#conjOrderedBigBlocks

@@ -1,0 +1,219 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+\newcommand{\RR}{\mathbb R}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\OO}{O}
+\newcommand{\interl}{\interl}
+
+\title{Ordered Set Partitions Counted by Big Blocks:\\
+Exact Recurrences and Certified Computational Evidence}
+\author{Khaled Abdelli}
+\date{27 November 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We study Per Alexandersson's ordered big-block conjecture.  We derive an
+integer convolution recurrence, a Riccati differential equation, and an
+equivalent positive-coefficient Riccati form.  We describe rigorous exact
+methods for deciding real-rootedness and consecutive interlacing, and record
+the independently checked parameter ranges.  The distinction between ordering
+all blocks and ordering only the large blocks is made explicit.  Finite
+certificates are not presented as a proof of the all-parameter conjecture.
+\end{abstract}
+
+\section{Definitions and the conjecture}
+
+For \(j\ge2\), let \(\pi=(B_1\mid\cdots\mid B_k)\) be an ordered set partition
+of \([n]\), and put
+\[
+\OO_{n,j}(t)=\sum_{\pi}t^{\#\{i:|B_i|\ge j\}}.
+\]
+The empty ordered partition contributes \(\OO_{0,j}(t)=1\).  Define
+\[
+A_j(z)=\sum_{r=1}^{j-1}\frac{z^r}{r!},\qquad
+C_j(z)=e^z-1-A_j(z),\qquad
+B_j(z,t)=A_j(z)+tC_j(z).
+\]
+The labelled-sequence construction gives
+\[
+F_j(z,t):=\sum_{n\ge0}\OO_{n,j}(t)\frac{z^n}{n!}
+=\sum_{k\ge0}B_j(z,t)^k
+=\frac1{1-B_j(z,t)}.
+\]
+
+\begin{conjecture}[Alexandersson, 2026]
+For every \(j\ge2\) and \(n\ge0\), the polynomial \(\OO_{n,j}(t)\) is
+real-rooted, and \(\OO_{n,j}\interl\OO_{n+1,j}\).
+\end{conjecture}
+
+\section{Exact coefficient identities}
+
+\begin{proposition}
+The coefficients of \(\OO_{n,j}\) are nonnegative integers and
+\(\deg\OO_{n,j}=\lfloor n/j\rfloor\).  Moreover,
+\[
+\OO_{0,j}=1,\qquad
+\OO_{n,j}=
+\sum_{r=1}^{j-1}\binom nr\OO_{n-r,j}
++t\sum_{r=j}^{n}\binom nr\OO_{n-r,j}.
+\]
+\end{proposition}
+
+\begin{proof}
+Choose the first block \(B_1\).  If \(|B_1|=r\), its labels can be selected in
+\(\binom nr\) ways, and the remaining ordered partition contributes
+\(\OO_{n-r,j}\).  The first sum handles unweighted blocks of size less than
+\(j\); the second handles a block contributing one factor of \(t\).
+Nonnegativity is immediate.  A term \(t^m\) requires at least \(jm\) labels,
+and \(m=\lfloor n/j\rfloor\) is attained by using only large blocks.
+\end{proof}
+
+For \(j=3\), the recurrence gives
+\[
+1,\quad 1,\quad 3,\quad 12+t,\quad 66+9t,\quad
+450+91t,\quad 3690+973t+20t^2.
+\]
+At \(t=1\), all block weights are equal, so
+\[
+F_j(z,1)=\frac1{2-e^z},\qquad
+\OO_{n,j}(1)=\sum_{k=0}^n k!{n\brace k},
+\]
+independently of \(j\).
+
+\section{Riccati and convolution identities}
+
+Write
+\[
+H_{n,j}(t)=n![z^n]F_j(z,t)^2
+=\sum_{r=0}^n\binom nr\OO_{r,j}(t)\OO_{n-r,j}(t).
+\]
+Since \(F_j'=B_j'F_j^2\), direct coefficient comparison in
+\[
+B_j'=2+(t-1)\frac{z^{j-1}}{(j-1)!}-(1-B_j)
+\]
+gives the following exact recurrence.
+
+\begin{theorem}
+For \(n\ge0\),
+\[
+\OO_{n+1,j}=2H_{n,j}-\OO_{n,j}
++(t-1)\binom{n}{j-1}H_{n-j+1,j},
+\]
+where \(H_{m,j}=0\) for \(m<0\).
+\end{theorem}
+
+The final term is signed.  An equivalent form exposes nonnegative structural
+coefficients:
+\[
+F_j'=(B_j+B_j'-1)F_j^2+F_j.
+\]
+Indeed, if \(b_r=1\) for \(r<j\) and \(b_r=t\) for \(r\ge j\), then the
+coefficient of \(z^q/q!\) in \(B_j+B_j'-1\) is \(0\) for \(q=0\),
+\(q+2\) for \(1\le q<j-1\), \(1+jt\) for \(q=j-1\), and
+\((q+2)t\) for \(q\ge j\).
+
+\section{A universal short recurrence}
+
+Put \(T=t\,\partial_t\). A second exact identity holds for every \(j\ge2\):
+\[
+\begin{aligned}
+\OO_{n,j}={}&n\OO_{n-1,j}+2T\OO_{n-1,j}
++\sum_{r=2}^{j-1}\binom nr\OO_{n-r,j}\\
+&+\binom{n-1}{j-1}t\bigl[1+(t-1)\partial_t\bigr]\OO_{n-j,j}.
+\end{aligned}
+\]
+Negative-index terms are omitted. For \(j=3\), this becomes
+\[
+\OO_{n,3}=n\OO_{n-1,3}+2t\OO'_{n-1,3}
++\binom n2\OO_{n-2,3}
++\frac{t(n-1)(n-2)}2
+\bigl[1+(t-1)\partial_t\bigr]\OO_{n-3,3}.
+\]
+
+To prove the general identity, write \(w_j=z^{j-1}/(j-1)!\) and \(C_j=e^z-E_{j-1}\).
+Since \(C_j'=C_j+w_j\) and \(\partial_tF_j=C_jF_j^2\), differentiation of
+\[
+tC_jF_j-2\int_0^z TF_j(u,t)\,du
+-\frac{t}{(j-1)!}\int_0^z u^{j-1}
+\bigl[F_j+(t-1)\partial_tF_j\bigr](u,t)\,du
+\]
+shows that it is constant in \(z\); its value at \(z=0\) is zero. Extracting
+\(n![z^n]\) gives
+\[
+t\sum_{r=j}^n\binom nr\OO_{n-r,j}
+=2T\OO_{n-1,j}
++\binom{n-1}{j-1}t\bigl[1+(t-1)\partial_t\bigr]\OO_{n-j,j}.
+\]
+Substitution into the first-block recurrence proves the formula.
+
+The same coefficient family, in the snail-race interpretation, appears in
+Chen--Zhu, \emph{A Snail Race Problem} (2026), Theorem 3 and Theorem 7.
+
+\section{Related ordered lifts are different}
+
+Let \(P_{n,j}\) count ordinary set partitions by their large blocks.  Its EGF
+is \(e^{B_j}\).  Ordering only the \(m\) large blocks replaces \(t^m\) by
+\(m!t^m\), and therefore has EGF
+\[
+\frac{e^{A_j(z)}}{1-tC_j(z)}.
+\]
+This is \emph{not} \(1/(1-A_j-tC_j)\), which orders all blocks.  The
+distinction is essential when applying theorems for restricted big-block
+families to the present conjecture.
+
+\section{Rigorous finite certification}
+
+All coefficient generation uses integer arithmetic.  Root isolation uses
+FLINT's integer-polynomial routine with Arb complex balls.  A root is
+certified non-real when its imaginary ball excludes zero; a real-rooted
+verdict requires every returned root enclosure to lie on the real axis.
+Consecutive interlacing is checked by comparing rigorous lower and upper
+endpoints of ordered real-root balls, including every degree-increasing
+transition.
+
+Independent checks use exact Sturm sequences, exact discriminants, and
+Newton's ultra-log-concavity inequalities.  A negative discriminant is an
+immediate obstruction; a zero discriminant is not, since repeated real roots
+are allowed.  Floating-point root finders are never used as certificates.
+
+\input{results}
+
+\section{Conclusion and remaining work}
+The all-parameter conjecture is not inferred from finite computation.  The
+proved identities above provide several possible starting points for an
+interlacing induction, while the certified computations identify the precise
+unchecked frontier.
+
+\begin{thebibliography}{9}
+\bibitem{Ale26}
+P. Alexandersson.
+\newblock Open problems on real-rootedness.
+\newblock SymCat, 2026.
+\newblock \url{https://www.symmetricfunctions.com/realRootedOpenProblems.htm#conjOrderedBigBlocks}.
+
+\bibitem{ChenZhu26}
+Y. Chen and W. Zhu.
+\newblock A Snail Race Problem.
+\newblock arXiv:2607.02085, 2026.
+\newblock \url{https://arxiv.org/abs/2607.02085}.
+
+\bibitem{Issue108}
+\newblock Public computational audit, Issue \#108, 2026.
+\newblock \url{https://github.com/1337isnot1337/solved-conjectures/issues/108}.
+\end{thebibliography}
+
+\end{document}

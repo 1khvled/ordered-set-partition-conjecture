@@ -1,0 +1,113 @@
+{
+  "stats": {
+    "j=2,k=2": {
+      "count": 7695,
+      "negative": 0,
+      "zero": 4845,
+      "positive": 2850
+    },
+    "j=2,k=3": {
+      "count": 116280,
+      "negative": 0,
+      "zero": 82080,
+      "positive": 34200
+    },
+    "j=2,k=4": {
+      "count": 813960,
+      "negative": 0,
+      "zero": 610470,
+      "positive": 203490
+    },
+    "j=2,k=5": {
+      "count": 2930256,
+      "negative": 0,
+      "zero": 2279088,
+      "positive": 651168
+    },
+    "j=3,k=2": {
+      "count": 3591,
+      "negative": 0,
+      "zero": 2268,
+      "positive": 1323
+    },
+    "j=3,k=3": {
+      "count": 33915,
+      "negative": 0,
+      "zero": 24115,
+      "positive": 9800
+    },
+    "j=3,k=4": {
+      "count": 135660,
+      "negative": 0,
+      "zero": 103075,
+      "positive": 32585
+    },
+    "j=3,k=5": {
+      "count": 244188,
+      "negative": 0,
+      "zero": 193914,
+      "positive": 50274
+    },
+    "j=4,k=2": {
+      "count": 1710,
+      "negative": 0,
+      "zero": 940,
+      "positive": 770
+    },
+    "j=4,k=3": {
+      "count": 9690,
+      "negative": 0,
+      "zero": 5840,
+      "positive": 3850
+    },
+    "j=4,k=4": {
+      "count": 19380,
+      "negative": 0,
+      "zero": 12065,
+      "positive": 7315
+    },
+    "j=4,k=5": {
+      "count": 11628,
+      "negative": 0,
+      "zero": 7239,
+      "positive": 4389
+    },
+    "j=5,k=2": {
+      "count": 1026,
+      "negative": 0,
+      "zero": 520,
+      "positive": 506
+    },
+    "j=5,k=3": {
+      "count": 3876,
+      "negative": 0,
+      "zero": 2105,
+      "positive": 1771
+    },
+    "j=5,k=4": {
+      "count": 3876,
+      "negative": 0,
+      "zero": 2105,
+      "positive": 1771
+    },
+    "j=6,k=2": {
+      "count": 1026,
+      "negative": 0,
+      "zero": 666,
+      "positive": 360
+    },
+    "j=6,k=3": {
+      "count": 3876,
+      "negative": 0,
+      "zero": 2956,
+      "positive": 920
+    },
+    "j=6,k=4": {
+      "count": 3876,
+      "negative": 0,
+      "zero": 3370,
+      "positive": 506
+    }
+  },
+  "first_negative_minors": []
+}

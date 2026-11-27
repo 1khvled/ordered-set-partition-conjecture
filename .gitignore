@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.env
+*.log
+*.tmp
+
+# Lean build artifacts
+lean/.lake/
+lean/.git/
+
+# Large machine-generated root enclosures can be regenerated.
+numerical/root-enclosures/
+
+# TeX build artifacts (the PDF itself is committed).
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.toc

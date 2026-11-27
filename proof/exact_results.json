@@ -1,0 +1,67 @@
+{
+  "nmax": 60,
+  "j": {
+    "2": {
+      "short_recurrence_first_failure": null,
+      "riccati_first_failure": null,
+      "degree_formula_ok": true
+    },
+    "3": {
+      "short_recurrence_first_failure": null,
+      "riccati_first_failure": null,
+      "degree_formula_ok": true
+    },
+    "4": {
+      "short_recurrence_first_failure": null,
+      "riccati_first_failure": null,
+      "degree_formula_ok": true
+    },
+    "5": {
+      "short_recurrence_first_failure": null,
+      "riccati_first_failure": null,
+      "degree_formula_ok": true
+    },
+    "6": {
+      "short_recurrence_first_failure": null,
+      "riccati_first_failure": null,
+      "degree_formula_ok": true
+    },
+    "7": {
+      "short_recurrence_first_failure": null,
+      "riccati_first_failure": null,
+      "degree_formula_ok": true
+    },
+    "8": {
+      "short_recurrence_first_failure": null,
+      "riccati_first_failure": null,
+      "degree_formula_ok": true
+    },
+    "9": {
+      "short_recurrence_first_failure": null,
+      "riccati_first_failure": null,
+      "degree_formula_ok": true
+    },
+    "10": {
+      "short_recurrence_first_failure": null,
+      "riccati_first_failure": null,
+      "degree_formula_ok": true
+    },
+    "11": {
+      "short_recurrence_first_failure": null,
+      "riccati_first_failure": null,
+      "degree_formula_ok": true
+    },
+    "12": {
+      "short_recurrence_first_failure": null,
+      "riccati_first_failure": null,
+      "degree_formula_ok": true
+    }
+  },
+  "literal_F_j3_n1": {
+    "F_0": "1/(1-t)",
+    "F_1": "1/(1-t)^2",
+    "unweighted_recurrence_rhs": "1/(1-t)",
+    "short_recurrence_rhs": "(1+t)/(1-t)^2",
+    "conclusion": "neither equals F_1; the recurrence sequence is G=1/(1-(B-t))"
+  }
+}

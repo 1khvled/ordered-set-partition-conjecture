@@ -1,0 +1,484 @@
+{
+  "summary": {
+    "2": {
+      "compatible": 76,
+      "not_compatible": 26,
+      "nonreal": 0,
+      "degree_gap": 0,
+      "common_root": 0
+    },
+    "3": {
+      "compatible": 129,
+      "not_compatible": 31,
+      "nonreal": 0,
+      "degree_gap": 0,
+      "common_root": 0
+    },
+    "4": {
+      "compatible": 197,
+      "not_compatible": 28,
+      "nonreal": 0,
+      "degree_gap": 0,
+      "common_root": 0
+    },
+    "5": {
+      "compatible": 274,
+      "not_compatible": 20,
+      "nonreal": 0,
+      "degree_gap": 0,
+      "common_root": 0
+    }
+  },
+  "first_failures": [
+    {
+      "j": 2,
+      "n": 5,
+      "pair": [
+        "O4",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 2,
+      "n": 5,
+      "pair": [
+        "R",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 2,
+      "n": 7,
+      "pair": [
+        "O6",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 2,
+      "n": 7,
+      "pair": [
+        "R",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 2,
+      "n": 8,
+      "pair": [
+        "O7",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 2,
+      "n": 8,
+      "pair": [
+        "R",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 2,
+      "n": 9,
+      "pair": [
+        "O8",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 2,
+      "n": 9,
+      "pair": [
+        "R",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 2,
+      "n": 10,
+      "pair": [
+        "O9",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 2,
+      "n": 10,
+      "pair": [
+        "R",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 2,
+      "n": 11,
+      "pair": [
+        "O10",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 2,
+      "n": 11,
+      "pair": [
+        "R",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 2,
+      "n": 12,
+      "pair": [
+        "O11",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 2,
+      "n": 12,
+      "pair": [
+        "R",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 2,
+      "n": 13,
+      "pair": [
+        "O12",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 2,
+      "n": 13,
+      "pair": [
+        "R",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 2,
+      "n": 14,
+      "pair": [
+        "O13",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 2,
+      "n": 14,
+      "pair": [
+        "R",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 2,
+      "n": 15,
+      "pair": [
+        "O14",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 2,
+      "n": 15,
+      "pair": [
+        "R",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 2,
+      "n": 16,
+      "pair": [
+        "O15",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 2,
+      "n": 16,
+      "pair": [
+        "R",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 2,
+      "n": 17,
+      "pair": [
+        "O16",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 2,
+      "n": 17,
+      "pair": [
+        "R",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 2,
+      "n": 18,
+      "pair": [
+        "O17",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 2,
+      "n": 18,
+      "pair": [
+        "R",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 3,
+      "n": 7,
+      "pair": [
+        "O6",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 3,
+      "n": 7,
+      "pair": [
+        "R",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 3,
+      "n": 8,
+      "pair": [
+        "O7",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 3,
+      "n": 8,
+      "pair": [
+        "O6",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 3,
+      "n": 8,
+      "pair": [
+        "R",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 3,
+      "n": 10,
+      "pair": [
+        "O9",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 3,
+      "n": 10,
+      "pair": [
+        "R",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 3,
+      "n": 11,
+      "pair": [
+        "O10",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 3,
+      "n": 11,
+      "pair": [
+        "O9",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 3,
+      "n": 11,
+      "pair": [
+        "R",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 3,
+      "n": 12,
+      "pair": [
+        "O11",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 3,
+      "n": 12,
+      "pair": [
+        "O10",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 3,
+      "n": 12,
+      "pair": [
+        "R",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 3,
+      "n": 13,
+      "pair": [
+        "O12",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 3,
+      "n": 13,
+      "pair": [
+        "O11",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 3,
+      "n": 13,
+      "pair": [
+        "R",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 3,
+      "n": 14,
+      "pair": [
+        "O13",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 3,
+      "n": 14,
+      "pair": [
+        "O12",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 3,
+      "n": 14,
+      "pair": [
+        "R",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 3,
+      "n": 15,
+      "pair": [
+        "O14",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 3,
+      "n": 15,
+      "pair": [
+        "O13",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 3,
+      "n": 15,
+      "pair": [
+        "R",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 3,
+      "n": 16,
+      "pair": [
+        "O15",
+        "Q"
+      ],
+      "status": "not_compatible"
+    },
+    {
+      "j": 3,
+      "n": 16,
+      "pair": [
+        "O14",
+        "Q"
+      ],
+      "status": "not_compatible"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it and the original conjecture."
+title: "Ordered Set Partitions Counted by Big Blocks: Exact Recurrences and Certified Computational Evidence"
+type: software
+authors:
+  - family-names: Abdelli
+    given-names: Khaled
+repository-code: "https://github.com/1khvled/ordered-set-partition-conjecture"
+url: "https://github.com/1khvled/ordered-set-partition-conjecture"
+license: MIT
+date-released: 2026-11-27

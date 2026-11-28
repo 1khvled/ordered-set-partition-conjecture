@@ -40,7 +40,13 @@ See `proof/`, `proof-weighted/`, and `proof-matrix/`.
 | lag-Pick Wronskians, `j=2..9`, `n <= min(5j,34)` | 1,026 | — | 1,026 | 0 |
 | cross-family lag-Pick, `j=2..8`, `n <= min(5j,30)` | 732 | — | 732 | 0 |
 | boundary `W(H_n,O_{n-d})`, `j=2..7`, `n <= min(5j,30)` | 548 | — | 548 | 0 |
+| `j=3..60` new frontier, full range | 8,460 row filters | 8,460 cheap skips | 0 | 0 |
 | `j=61..92`, `2j <= n <= 5j` (checkpoint, sweep in progress) | 7,376 | 7,344 | 7,376 | 0 |
+
+The `j=3..60` frontier run certifies only row-level Newton/ultra-log-concavity
+and discriminant-sign filters. Because no row was flagged as a suspect, every
+interlacing pair check was skipped; those 8,460 pairs are **not** certified
+interlacing checks.
 
 Independent compact reruns reproduced all 660 `j=5` rows/pairs and all 9,075 wide-range rows/pairs.
 The new `j=61..92` figures are a partial checkpoint, not a completed range.

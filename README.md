@@ -100,6 +100,13 @@ O_6 = 3690 + 973t + 20t^2
 - `proof-automated-consecutive/`, `proof-hurwitz-wronskian/` — exact finite
   discovery of the consecutive-Wronskian invariant and its Routh/Hermite
   obstructions; numerical left-half-plane evidence is not used as a certificate.
+- `proof-new-split/`, `proof-j2-b-split/` — exact \(A+tB\) split removing the
+  signed derivative term; the \(j=2\) interlacing target is audited and remains
+  open, with an exact obstruction showing coefficient nonnegativity is insufficient.
+- `proof-psd-realization/` — exact determinant realization and a kill-test showing
+  no simple structured symmetric matrix exists.
+- `proof-associated-stirling-c1/` — a retracted alternative C1 proof with the exact
+  optimization gap recorded; the accepted (H) proof is in `proof-u-operator/`.
 - `proof-counterexample-new/`, `proof-large-j-sweep/` — new-range counterexample
   hunts with compact exact logs. Large-threshold results are reported from the
   checkpoint only until the full sweep finishes.

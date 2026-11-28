@@ -107,6 +107,8 @@ O_6 = 3690 + 973t + 20t^2
   no simple structured symmetric matrix exists.
 - `proof-associated-stirling-c1/` — a retracted alternative C1 proof with the exact
   optimization gap recorded; the accepted (H) proof is in `proof-u-operator/`.
+- `proof-hstar-reformulation/` — exact \(v=t/(1-t)\) and \(h^*\) identities;
+  the reformulation is equivalent to the original conjecture, not a proof.
 - `proof-counterexample-new/`, `proof-large-j-sweep/` — new-range counterexample
   hunts with compact exact logs. Large-threshold results are reported from the
   checkpoint only until the full sweep finishes.

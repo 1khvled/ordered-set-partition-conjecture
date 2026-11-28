@@ -24,6 +24,9 @@ obtained. Finite computations are not presented as a proof.
 - Exact obstructions for linear/Möbius threshold maps, generic nonlinear renewal,
   crossing involutions, edge-only asymptotics, and naive common-interlacer
   propagation.
+- Unconditional proof of the 2-associated-Stirling inequality (H) via a coupled
+  interlacing induction for the factorial-weighted rows `proof-u-operator/`.
+  Finite exact checks confirm the coupled invariants and (H) through `r=30`.
 
 See `proof/`, `proof-weighted/`, and `proof-matrix/`.
 

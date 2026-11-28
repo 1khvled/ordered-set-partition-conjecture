@@ -127,3 +127,21 @@ Thus the Mobius decoupling, as corrected, is an exact algebraic reformulation bu
 
 - `verify.py` - exact SymPy checks: prompt identity residual, correct identity, wrong decoupling mismatch, correct coupled formula reproduction.
 - `NOTES.md` - this note.
+
+## 8. Later correction: the decoupled variable is v = t/(1-t)
+
+The parameter $u=t/(1+t)$ used above is the wrong Mobius map. Since
+$C_j=e^z-1-A_j$,
+\[
+1-A_j-tC_j=(1+t)-(1-t)A_j-t e^z.
+\]
+Setting $v=t/(1-t)$, equivalently $t=v/(1+v)$, gives the exact decoupled form
+\[
+F_j(z,t)=\frac{1+v}{(1-A_j(z))-v(e^z-2)}
+       =\frac{1+v}{1-A_j(z)-v e^z+2v}.
+\]
+Here $e^z-2$ is $j$-independent. The map $t\mapsto t/(1-t)$ is strictly
+increasing on $(-\infty,0]$ and maps it onto $(-1,0]$, so root order and
+consecutive interlacing are preserved. This corrects the earlier variable and
+should be used instead of $u$ if the route is revisited. It still does not
+constitute a proof.

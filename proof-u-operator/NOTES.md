@@ -148,3 +148,58 @@ more root than $R$, the pattern is $p_1<r_1<\cdots<p_{d+1}<0(q)$; if the
 degrees are equal, either $0(q)$ is rightmost or $P$ and $R$ already alternate
 with $0(q)$ appended. Hence $W(P,Q)\le0$ by the interlacing criterion, which
 is exactly (L).
+
+## 7. Coupled induction closing the associated-Stirling inequality (H)
+
+Let $G_r(x)=E_r(x)/x=\sum_{k\ge1}k!A_{r,k}x^{k-1}$, so $G_r(0)=1$. The exact
+recurrence is
+\[
+G_r=(xG_{r-1})'+(r-1)x\,\mathcal U G_{r-2}. \tag{G}
+\]
+
+**Theorem.** For every $r\ge5$, $G_r$ has simple strictly negative roots and
+both $G_{r-1}\preceq G_r$ and $\mathcal U G_{r-1}\preceq G_r$.
+
+*Proof.* Base $r=5$: $G_3=1$, $G_4=1+6x$, $G_5=1+20x$, and
+$\mathcal UG_4=2+18x$; the two interlacings are immediate.
+
+For the step, put $q=G_{r-2}$, $p=G_{r-1}$, $c=r-1>0$, and assume
+$q\preceq p$ and $\mathcal Uq\preceq p$. The perturbation lemma of §3 gives
+$\mathcal Uq\preceq\mathcal Up$, while $p\preceq\mathcal Up$ is the derivative
+case of the same lemma.
+
+Let $\lambda_1<\dots<\lambda_k<0$ be the simple roots of $\mathcal Up$. At
+$\lambda_i$, $\mathcal Up=0$ gives $(xp)'(\lambda_i)=-p(\lambda_i)$, so
+$(-1)^{k-i}(xp)'(\lambda_i)<0$. Since $\mathcal Uq\preceq\mathcal Up$,
+$(-1)^{k-i}\lambda_i\mathcal Uq(\lambda_i)\le0$ because $\lambda_i<0$. Hence
+$(-1)^{k-i}G_r(\lambda_i)<0$ by (G). Comparing these signs with
+$G_r(0)=1>0$ and the leading sign at $-\infty$ gives $\deg G_r$ strict sign
+changes on $(-\infty,0)$; thus $G_r$ has simple negative roots and
+$\mathcal Up\preceq G_r$.
+
+Let $\beta_1<\dots<\beta_k<0$ be the simple roots of $p$. At $\beta_i$,
+$G_r(\beta_i)=\beta_i(p'(\beta_i)+c\mathcal Uq(\beta_i))$. Since
+$\mathcal Uq\preceq p$, $(-1)^{k-i}\mathcal Uq(\beta_i)\ge0$, while
+$(-1)^{k-i}p'(\beta_i)>0$ and $\beta_i<0$; hence
+$(-1)^{k-i}G_r(\beta_i)<0$. The same sign count yields $p\preceq G_r$.
+
+In both counts the degree cases are: if $\deg q=\deg p-1$ then $\deg G_r=\deg p$;
+if $\deg q=\deg p$ then $\deg G_r=\deg p+1$, and the leading sign at $-\infty$
+is $(-1)^{\deg p+1}$. This closes the induction. $\square$
+
+**Corollary (H).** The perturbation with $A_\varepsilon=(x+\varepsilon)p$ and
+$B_\varepsilon=x(x+2\varepsilon)q$ gives $(xp)'\preceq x\mathcal Uq$, hence
+$E_{r-1}'\preceq G_r$ by (G). For real-rooted polynomials with nonpositive
+roots and positive coefficients, $f\preceq g$ implies the coefficient-ratio
+inequality $b_{j+1}a_j\ge b_j a_{j+1}$ (write both as products
+$\prod(1+u_ix)$ and step each $u_i$ upward one at a time). Applying this to
+$f=E_{r-1}'$ and $g=G_r$ gives, with $k=j+1$,
+\[
+kA_{r,k+1}A_{r-1,k}\ge(k+1)A_{r,k}A_{r-1,k+1},
+\]
+which is (H) with $m=r-1$. Exact checks `verify_coupled.py` confirm the
+recurrence, both interlacings, and (H) for $r\le30$.
+
+This proves the associated-Stirling inequality (H) unconditionally; it does
+**not** by itself prove the full \(j=2\) root-velocity or discriminant/resultant
+statements.

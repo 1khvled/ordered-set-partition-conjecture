@@ -36,16 +36,20 @@ def W(f: sp.Expr, g: sp.Expr) -> sp.Expr:
     return sp.expand(sp.diff(f, x) * g - f * sp.diff(g, x))
 
 
-def variations(seq: list[int]) -> int:
-    signs = [1 if c > 0 else -1 for c in seq if c != 0]
-    return sum(a != b for a, b in zip(signs, signs[1:]))
-
-
 def real_roots(poly: sp.Poly) -> int:
     seq = sp.sturm(poly)
-    return variations([int(c) for c in seq[0].all_coeffs()]) - variations(
-        [int(c) for c in seq[-1].all_coeffs()]
-    )
+
+    def sign_at(p, minus=False):
+        sg = 1 if p.LC() > 0 else -1
+        if minus and p.degree() % 2 == 1:
+            sg = -sg
+        return sg
+
+    def var(minus):
+        s = [sign_at(p, minus) for p in seq if not p.is_zero]
+        return sum(a != b for a, b in zip(s, s[1:]))
+
+    return var(True) - var(False)
 
 
 def main() -> None:

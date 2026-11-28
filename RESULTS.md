@@ -27,6 +27,10 @@ obtained. Finite computations are not presented as a proof.
 - Unconditional proof of the 2-associated-Stirling inequality (H) via a coupled
   interlacing induction for the factorial-weighted rows `proof-u-operator/`.
   Finite exact checks confirm the coupled invariants and (H) through `r=30`.
+- Unconditional all-\(n\) TP2 theorem for the full monomial coefficient matrix
+  \(d_{n,k}=[t^k]O_{n,2}(t)\) in `proof-j2-tp2-transfer/`, proved through a
+  degenerate-Riordan left-production matrix. Stronger total nonnegativity is
+  false (exact negative \(4\times4\) minor).
 
 See `proof/`, `proof-weighted/`, and `proof-matrix/`.
 

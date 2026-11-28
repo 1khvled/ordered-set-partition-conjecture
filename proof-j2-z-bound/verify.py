@@ -59,3 +59,41 @@ print("residual bad:", bad)
 sep("V6: direction 2a+1 < 3a+2 for a>0")
 for av in [1,2,3,5,10]:
     print(f"  a={av}: (a+1)^2-a^2={2*av+1} < 3a+2={3*av+2}: {2*av+1<3*av+2}")
+
+sep("V7: exact rational obstruction to a generic non-first-root extension")
+av = 20
+rr = sp.expand((1 - 2*x) * (1 - sp.Rational(13, 14)*x)
+               * (1 - sp.Rational(10, 11)*x))
+vv = sp.expand((av + 1)*rr + x*sp.diff(rr, x)) / av
+rhos = [sp.Rational(1, 2), sp.Rational(14, 13), sp.Rational(11, 10)]
+us = [sp.simplify(1/(1 - rho)) for rho in rhos]
+z1 = sp.simplify(sp.diff(rr, x, 2).subs(x, 1) / rr.subs(x, 1))
+print("R =", sp.factor(rr))
+print("V =", sp.factor(vv))
+print("V(1) =", sp.simplify(vv.subs(x, 1)))
+print("u_j =", us, "sum =", sum(us))
+print("Z(1) =", z1, "threshold =", 3*av + 2,
+      "violation:", bool(z1 >= 3*av + 2))
+print("signs at 0,rho1,1,rho2,rho3 =",
+      [sp.sign(vv.subs(x, z)) for z in [0, rhos[0], 1, rhos[1], rhos[2]]])
+print("degree(V) =", sp.Poly(vv, x).degree())
+
+sep("V8: n=4,a=2 direct smallest-root direction sample")
+nn, aa = 4, 2
+rr = Q(nn, aa, -x)
+vv = Q(nn, aa + 1, -x)
+hh = Q(nn - 1, aa + 1, -x)
+kk = Q(nn - 2, aa + 2, -x)
+yy = sp.expand(2*hh + x*sp.diff(hh, x))
+sigma = sp.Rational(1, 12)
+rho = sp.Rational(1, 9)
+p1 = sp.simplify(sigma/(rho - sigma))
+z0 = sp.simplify(sigma**2*sp.diff(rr, x, 2).subs(x, sigma)
+                 / rr.subs(x, sigma))
+print("R =", rr, "V =", vv, "H =", hh, "K =", kk, "Y =", yy)
+print("sigma =", sigma, "rho =", rho, "V(sigma) =", vv.subs(x, sigma))
+print("p1 =", p1, "> a:", bool(p1 > aa), "Z =", z0)
+print("M-root residual =", sp.simplify(
+    (hh + sigma*sp.diff(hh, x)).subs(x, sigma)
+    - (nn - 1)*(aa + 1)*sigma*kk.subs(x, sigma)))
+print("Y/2 =", sp.simplify(yy.subs(x, sigma)/2))

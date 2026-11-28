@@ -440,3 +440,129 @@ first-root method stops being sufficient.
   evidence; not proofs).
 
 From this directory: `py -3.14 verify.py`. No packages installed, no build.
+
+---
+
+## 9. Addendum: non-flow smallest-root proof and an exact later-root obstruction
+
+This addendum was prepared after a server restart. It preserves the preceding
+root-flow proof, but gives an independent recurrence/interlacing proof of the
+smallest-root conclusion that does not use root flow. It also replaces the
+qualitative structural falsification in §6.3 with a single exact rational
+witness.
+
+### 9.1 Direct non-flow proof at the smallest root
+
+Let `sigma` be the smallest positive root of `V`, and write the positive roots
+of `R` as `0<rho_1<...<rho_d`. Define
+
+\[
+p_j=\frac{\sigma}{\rho_j-\sigma}>0.
+\]
+
+The vertical identity gives `sum p_j=a+1`. Let `h_1<...<h_e` be the positive
+roots of `H=Q_{n-1,a+1}(-x)`. The coupled interlacings imply `sigma<h_k` and
+
+\[
+\rho_1<h_1<\rho_2<\cdots<h_{d-1}<\rho_d
+\]
+
+when `e=d-1`, with one extra final `H`-root when `e=d`.
+
+At the first root of `V`, `V'(sigma)<0`. Hence `B(V,H)>0` and `B(V,Y)>0`
+give `H(sigma)>0` and `Y(sigma)>0`. Applying (M) to `V` at `sigma` gives
+
+\[
+H+\sigma H'=(n-1)(a+1)\sigma K=\frac{Y}{2}>0,
+\qquad K=Q_{n-2,a+2}(-\sigma).
+\]
+
+Dividing by `H(sigma)>0` and taking the logarithmic derivative of the factored
+polynomial `H` yields
+
+\[
+\sum_{k=1}^e\frac{\sigma}{h_k-\sigma}<1.
+\tag{9.1}
+\]
+
+Since `h_{j-1}<rho_j` for `j>=2`,
+
+\[
+\sum_{j=2}^d p_j
+=\sum_{j=2}^d\frac{\sigma}{\rho_j-\sigma}
+<\sum_{j=2}^d\frac{\sigma}{h_{j-1}-\sigma}
+\le \sum_{k=1}^e\frac{\sigma}{h_k-\sigma}<1.
+\tag{9.2}
+\]
+
+Thus `p_1=a+1-sum_{j>=2}p_j>a`. With
+`u_j=sigma/(sigma-rho_j)=-p_j`, the exact identity (1.2) gives
+
+\[
+Z(\sigma)=(a+1)^2-\sum_j u_j^2
+<(a+1)^2-a^2=2a+1<3a+2.
+\tag{9.3}
+\]
+
+For `d=1` the tail is empty, `p_1=a+1`, and `Z=0`; for `n=4`, `H` is constant
+and (9.1) is the empty sum `0<1`. Therefore (9.3) covers every `n>=4,a>=1`.
+
+This proof uses only (M), (V), and the coupled interlacings. It is the direct
+recurrence-based root-gap estimate requested in the task, at the smallest root.
+
+### 9.2 Exact obstruction at a non-first root
+
+The following example is not a `Q`-polynomial and does not satisfy (M). It does
+satisfy the vertical identity, has positive coefficients in `t`, and has simple
+positive roots with strict vertical interlacing. Nevertheless it violates the
+requested bound at a non-first root.
+
+Let `a=20` and
+
+\[
+R(x)=(1-2x)\left(1-\frac{13x}{14}\right)
+     \left(1-\frac{10x}{11}\right),
+\qquad
+V(x)=\frac{21R(x)+xR'(x)}{20}.
+\]
+
+The roots of `R` are `1/2,14/13,11/10`. At `x=1`,
+
+\[
+(u_1,u_2,u_3)
+=\left(\frac1{1-1/2},\frac1{1-14/13},\frac1{1-11/10}\right)
+=(2,-13,-10),
+\]
+
+so `sum u_j=-21=-(a+1)` and therefore `V(1)=0`. Exactly,
+
+\[
+Z(1)=21^2-(2^2+13^2+10^2)=441-273=168>62=3a+2.
+\tag{9.4}
+\]
+
+The signs of `V` at `0,1/2,1,14/13,11/10` are `+,-,0,+,-`. Since `V` is
+cubic, these sign changes place one root in each of
+`(0,1/2),(1/2,14/13),(14/13,11/10)`; `x=1` is the middle root. Thus the
+failure is not caused by non-real roots or broken vertical interlacing.
+
+This is an exact obstruction to extending §9.1 using only (V), real-rootedness,
+positive coefficients, and vertical interlacing. It does not obstruct the
+actual associated-Stirling theorem, because (M) is absent. An all-root proof
+must therefore use an additional (M)-specific estimate at `j>=2`; no such
+estimate is proved in this directory.
+
+### 9.3 Audit of the addendum
+
+- **Direction:** (9.1) follows from `H+sigma H'>0`; (9.2) is strict because
+  `h_{j-1}<rho_j`; (9.3) follows from `p_1>a`. Exact sample `n=4,a=2`:
+  `sigma=1/12`, `rho=1/9`, `p_1=3>2`, `Z=0`.
+- **Monotonicity:** no parameter monotonicity is used in §9.1; only the proved
+  root order and a termwise tail comparison.
+- **Falsification:** (9.4) is an exact rational/algebraic witness, not numerical
+  evidence.
+- **Boundary:** `d=1`, constant `H`, and `a=1` are covered explicitly.
+- **Residuals:** `verify.py` V7 prints `V(1)=0`, `sum u_j=-21`, `Z(1)=168`,
+  and the exact sign pattern; V8 prints the `n=4,a=2` direction sample.
+- **Retraction:** none. The addendum does not retract any preceding theorem; it
+  strengthens the recorded status by making the structural obstruction exact.

@@ -31,6 +31,10 @@ obtained. Finite computations are not presented as a proof.
   \(d_{n,k}=[t^k]O_{n,2}(t)\) in `proof-j2-tp2-transfer/`, proved through a
   degenerate-Riordan left-production matrix. Stronger total nonnegativity is
   false (exact negative \(4\times4\) minor).
+- Unconditional all-\(n\) TP2 theorem for the falling-basis coefficient matrix
+  in `proof-j2-falling-bezout/`, via Cauchy–Binet from monomial TP2 and the
+  total nonnegativity of the Stirling matrix \(S2(k,i)\). This still does not
+  imply Bezoutian positive definiteness by itself.
 
 See `proof/`, `proof-weighted/`, and `proof-matrix/`.
 

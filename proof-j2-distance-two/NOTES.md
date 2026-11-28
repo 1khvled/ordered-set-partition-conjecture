@@ -262,6 +262,15 @@ By (U), \((ts)'=\mathcal Us-s=a\bigl(Q_{m-1,a+1}-Q_{m-1,a}\bigr)\), so
 \boxed{\;p(\lambda)=a\bigl[Q_{m-1,a+1}(\lambda)-Q_{m-1,a}(\lambda)\bigr].\;}
 \tag{GAP}
 \]
+
+**Correction from `proof-j2-qsign/NOTES.md` §1.** The displayed identity
+\(p(\lambda)=(ts)'(\lambda)\) is false at roots of \(\mathcal Uv\): recurrence
+(M) contains the extra term \((m-1)a\,t\,Q_{m-2,a+1}\), so actually
+\(p(\lambda)=(ts)'(\lambda)+(m-1)a\,\lambda\,v(\lambda)\). The correct remaining
+condition is the magnitude inequality (Sign) in `proof-j2-qsign/NOTES.md`, not
+a sign of \(Q_{m-1,a}(\lambda)\) alone. The paragraphs below are retained as the
+original, now superseded, diagnosis.
+
 The coupled theorem supplies the sign of \(Q_{m-1,a+1}\) at \(\lambda\) (via
 \(\mathcal UQ_{m-2,a+1}\preceq Q_{m-1,a+1}\)) and the sign of \(Q_{m-1,a}\) at
 the roots of \(Q_{m-2,a+1}\) (via \(Q_{m-2,a+1}\preceq Q_{m-1,a}\)); but
